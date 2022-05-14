@@ -1,6 +1,7 @@
 package main.java;
 
 import main.java.model.*;
+import main.java.view.*;
 
 public class Main {
 
@@ -8,6 +9,8 @@ public class Main {
 		PlayerRoster a = new PlayerRoster();
 		Player b = new Player("Harry");
 		a.addPlayer(b);
+		
+		new MainWindow(2);
 
 	}
 
