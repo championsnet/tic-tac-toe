@@ -29,6 +29,7 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	private Icon xIcon;
 	private Icon oIcon;
 	private final JLabel messageLbl;
+	private JTable table;
 	
 	private static final String FONT_NAME = "SansSerif";
 	
@@ -49,7 +50,7 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		// O pinakas pou prosomoiwnei to board
 		Object[][] board = {{null, null, null}, {null, null, null}, {null, null, null}};
 		model = new DefaultTableModel(board, board[0]);
-		JTable table = new JTable(model) {
+		table = new JTable(model) {
 			private static final long serialVersionUID = 1L;
 			public boolean isCellEditable(int row, int column) {                
 				return false;               
@@ -81,6 +82,14 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		
 	}
 	
+	public void setMessage(String message) {
+		messageLbl.setText(message);
+	}
+
+	public JTable getTable() {
+		return table;
+	}
+
 	public void setCell(int x, int y, int player) {
 		if (player == 1) model.setValueAt('X', x, y);
 		else model.setValueAt('O', x, y);

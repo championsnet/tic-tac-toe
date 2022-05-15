@@ -3,7 +3,6 @@ package main.java.view;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -33,9 +32,6 @@ public class PlayerPanel extends javax.swing.JPanel {
 	private final JLabel bestLbl;
 	
 	
-	private ActionListener startAction;
-	private ActionListener selectPlayerAction;
-	
 	private static final int BUTTON_WIDTH = 200;
     private static final int BUTTON_HEIGHT = 30;
 	private static final int IMAGE_WIDTH = 80;
@@ -53,13 +49,11 @@ public class PlayerPanel extends javax.swing.JPanel {
 		
 		// Initialize ready button
 		startButton = new JButton("READY");
-		startButton.addActionListener(startAction);
 		startButton.setMaximumSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		startButton.setAlignmentX(CENTER_ALIGNMENT);
 		
 		// Initialize select player button
 		selectPlayerButton = new JButton("SELECT PLAYER");
-		selectPlayerButton.addActionListener(selectPlayerAction);
 		selectPlayerButton.setMaximumSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		selectPlayerButton.setAlignmentX(CENTER_ALIGNMENT);
 		
@@ -133,5 +127,44 @@ public class PlayerPanel extends javax.swing.JPanel {
 		add(Box.createRigidArea(new Dimension(0, 10)));	
 		add(bestLbl);
 	}
+
+
+	public JButton getStartButton() {
+		return startButton;
+	}
+
+
+	public JButton getSelectPlayerButton() {
+		return selectPlayerButton;
+	}
+	
+	public void setPlayerName(String text) {
+		playerNameLbl.setText(text);
+	}
+	
+	public void setTotal(String text) {
+		totalLbl.setText(text);
+	}
+	
+	public void setWon(String text) {
+		wonLbl.setText(text);
+	}
+	
+	public void setLost(String text) {
+		lostLbl.setText(text);
+	}
+	
+	public void setTotalScore(String text) {
+		totalScoreLbl.setText(text);
+	}
+	
+	public void setRecentScore(String text) {
+		recentScoreLbl.setText(text);
+	}
+	
+	public void setBest(String text) {
+		bestLbl.setText(text);
+	}
+	
 	
 }

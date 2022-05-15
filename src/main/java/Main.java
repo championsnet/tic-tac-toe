@@ -10,7 +10,7 @@ public class Main {
 		Player b = new Player("Harry");
 		a.addPlayer(b);
 		
-		MainWindow window = new MainWindow();
+		MainWindow view = new MainWindow();
 		
 		char[][] initTable = {{' ', ' ', ' '},{' ', ' ', ' '},{' ', ' ', ' '}};
 		
@@ -24,9 +24,11 @@ public class Main {
 			System.out.println(board.getState() + " is the winner!");
 		}
 		
-		window.getBoardPanel().setCell(0, 0, 1);
-		window.getBoardPanel().setCell(1, 0, 0);
-		window.getBoardPanel().setCell(1, 1, 1);
+		view.getBoardPanel().setCell(0, 0, 1);
+		view.getBoardPanel().setCell(1, 0, 0);
+		view.getBoardPanel().setCell(1, 1, 1);
+		
+		view.getBoardPanel().setMessage("You can change me Akis");
 		
 		
 		
