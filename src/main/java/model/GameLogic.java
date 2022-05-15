@@ -16,22 +16,12 @@ public class GameLogic {
 	}
 	
 	
-	public void set(int x, int y, char player, Board board) {
+	public void set(int x, int y, Board board) {
 		if (board.getFilledPos() % 2 == 0) {
-			if (player == 'x') {
-				this.table[x][y] = player;
-			}
-			else {
-				System.out.println("It is player's 'x' turn");
-			}
+			this.table[x][y] = 'x';
 		}
 		else {
-			if (player == 'o') {
-				this.table[x][y] = player;
-			}
-			else {
-				System.out.println("It is player's 'o' turn");
-			}
+			this.table[x][y] = 'o';
 		}
 	};
 	
