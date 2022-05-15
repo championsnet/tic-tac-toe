@@ -28,7 +28,7 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	private DefaultTableModel model;
 	private Icon xIcon;
 	private Icon oIcon;
-	private final JLabel whoMovesLbl;
+	private final JLabel messageLbl;
 	
 	private static final String FONT_NAME = "SansSerif";
 	
@@ -39,11 +39,11 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
 		
-		whoMovesLbl = new JLabel("<<<                                ");
-		whoMovesLbl.setAlignmentX(CENTER_ALIGNMENT);
-		whoMovesLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
+		messageLbl = new JLabel("<<<                                ");
+		messageLbl.setAlignmentX(CENTER_ALIGNMENT);
+		messageLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
 		
-		add(whoMovesLbl);
+		add(messageLbl);
 		add(Box.createRigidArea(new Dimension(0, 50)));	
 		
 		// O pinakas pou prosomoiwnei to board
@@ -85,4 +85,5 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		if (player == 1) model.setValueAt('X', x, y);
 		else model.setValueAt('O', x, y);
 	}
+	
 }

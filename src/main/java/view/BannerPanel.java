@@ -49,4 +49,6 @@ public class BannerPanel extends javax.swing.JPanel {
 		add(addPlayerButton);
 		add(doneButton);
 	}
+	
+	
 }

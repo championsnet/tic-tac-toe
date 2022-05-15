@@ -20,7 +20,9 @@ public class MainWindow extends JFrame {
     private final BannerPanel bannerPanel;  // gia to banner
     private final PlayerPanel xPanel;  // gia player x
     private final PlayerPanel oPanel;  // gia o
-    //private final JPanel hofPanel; // gia hall of fame
+    
+
+	//private final JPanel hofPanel; // gia hall of fame
     private final GameBoardPanel boardPanel; // gia kuriws paixnidi
 	
 	
@@ -59,5 +61,22 @@ public class MainWindow extends JFrame {
 		xPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
 		oPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
 		boardPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/2, 9*WINDOW_HEIGHT/10));
+	}
+	
+	
+	public BannerPanel getBannerPanel() {
+		return bannerPanel;
+	}
+
+	public PlayerPanel getxPanel() {
+		return xPanel;
+	}
+
+	public PlayerPanel getoPanel() {
+		return oPanel;
+	}
+
+	public GameBoardPanel getBoardPanel() {
+		return boardPanel;
 	}
 }
