@@ -40,5 +40,14 @@ final public class Board {
 	public char getCurrentPlayer() {
 		return currentPlayer;
 	}
+	
+	public char nextPlayer() {
+		if (this.state == 'x'){
+			return 'o';
+		}
+		else {
+			return 'x';
+		}
+	}
 
 }
