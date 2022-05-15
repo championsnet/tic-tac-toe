@@ -1,10 +1,9 @@
 package main.java.view;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -15,10 +14,13 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 
 //Suppress to enoxlitiko warning gia serialization
 @SuppressWarnings("serial")
@@ -35,6 +37,17 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	
 	public GameBoardPanel() {
 		
+		String pathX = "./src/main/resources/x.png";
+		String pathO = "./src/main/resources/o.png";
+		// Exception an gia kapoio logo de mporei na fortwsei h eikona
+		try {
+			BufferedImage xPic = ImageIO.read(new File(pathX));
+			xIcon = new ImageIcon(xPic);
+			BufferedImage oPic = ImageIO.read(new File(pathO));
+			oIcon = new ImageIcon(oPic);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -47,37 +60,68 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		add(messageLbl);
 		add(Box.createRigidArea(new Dimension(0, 50)));	
 		
-		// O pinakas pou prosomoiwnei to board
+		// O pinakas pou prosomoiwnei to board arxika kenos
 		Object[][] board = {{null, null, null}, {null, null, null}, {null, null, null}};
-		model = new DefaultTableModel(board, board[0]);
+		
+		// prepei na kanoume override ton renderer gia na emfanisoume eikones
+		model = new DefaultTableModel(board, board[0]) {
+			@Override
+		    public Class<?> getColumnClass(int column) {
+		        return Icon.class;
+		    }
+		};
+		
+		// ftiaxnoume table kai apagoreyoume to edit
 		table = new JTable(model) {
 			private static final long serialVersionUID = 1L;
 			public boolean isCellEditable(int row, int column) {                
 				return false;               
 			};
+			
+			// episis ftiaxnoume ta borders gia na moiazoun me triliza
+			// poliiii leptomeria ayto
+			public Component prepareRenderer(
+					TableCellRenderer renderer, int row, int column)
+	        	{
+	                Component c = super.prepareRenderer(renderer, row, column);
+	                JComponent jc = (JComponent)c;
+
+	                //  Color row based on a cell value
+	                //  Alternate row color
+
+	                int top = 3;
+                	int bottom = 3;
+                	int left = 3;
+                	int right = 3;
+                	if (row == 0) top = 0;
+                	if (row == 2) bottom = 0;
+                	if (column == 0) left = 0;
+                	if (column == 2) right = 0;
+                	jc.setBorder(new MatteBorder(top, left, bottom, right, Color.GRAY));
+	                return c;
+	            }
 		};
+		
+		// Disable selection color
 		table.setSelectionBackground(new Color(0f,0f,0f,0f));
-		table.setRowHeight(90);
-		table.getColumnModel().getColumn(0).setWidth(90);
-		table.getColumnModel().getColumn(1).setWidth(90);
-		table.getColumnModel().getColumn(2).setWidth(90);
-		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-		centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-		for (int x=0;x<3;x++){
-			table.getColumnModel().getColumn(x).setCellRenderer( centerRenderer );
-	    }
+		table.setRowHeight(120);
+		table.getColumnModel().getColumn(0).setWidth(120);
+		table.getColumnModel().getColumn(1).setWidth(120);
+		table.getColumnModel().getColumn(2).setWidth(120);
+		table.setShowGrid(false);
+		table.setIntercellSpacing(new Dimension(0, 0));
+		table.setBackground(getBackground());
+		
+		
 		
 		model = (DefaultTableModel) table.getModel();
 		
 		add(table);
 		
 		table.setAlignmentX(CENTER_ALIGNMENT);
-		table.setMaximumSize(new Dimension(270, 270));
+		table.setMaximumSize(new Dimension(360, 360));
 		
-		String pathX = "./src/main/resources/x.png";
-		String pathO = "./src/main/resources/o.png";
-		xIcon = new ImageIcon(pathX);
-		oIcon = new ImageIcon(pathO);
+		
 		
 		
 	}
@@ -91,8 +135,13 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	}
 
 	public void setCell(int x, int y, int player) {
-		if (player == 1) model.setValueAt('X', x, y);
-		else model.setValueAt('O', x, y);
+		if (player == 1) model.setValueAt(xIcon, x, y);
+		else model.setValueAt(oIcon, x, y);
+		System.out.println(xIcon);
+	}
+	
+	public void setBoardVisible(boolean state) {
+		setVisible(state);
 	}
 	
 }
