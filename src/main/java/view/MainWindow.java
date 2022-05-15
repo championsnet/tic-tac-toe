@@ -1,32 +1,63 @@
 package main.java.view;
 
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
 
+import javax.swing.JFrame;
+
+// Suppress to enoxlitiko warning gia serialization
 @SuppressWarnings("serial")
-public class MainWindow extends JPanel {
+
+// H klasi ayti xeirizetai ola ta panel
+public class MainWindow extends JFrame {
 
 	private static final int WINDOW_WIDTH = 1000;
     private static final int WINDOW_HEIGHT = 625;
-    private static final int BUTTON_WIDTH = 80;
-    private static final int BUTTON_HEIGHT = 70;
-    private static final int MARGIN_X = 20;
-    private static final int MARGIN_Y = 60;
-
-    private JFrame window; // Main window
+    
+    private final Container pane;
+    private final BannerPanel bannerPanel;  // gia to banner
+    private final PlayerPanel xPanel;  // gia player x
+    private final PlayerPanel oPanel;  // gia o
+    //private final JPanel hofPanel; // gia hall of fame
+    private final GameBoardPanel boardPanel; // gia kuriws paixnidi
 	
 	
-	public MainWindow(int ui) {
+	public MainWindow() {
 
-		JPanel panel = new JPanel();
+		setTitle("Tuc Tac Toe");
+		pane = getContentPane();
 		
-		window = new JFrame("Tuc Tac Toe");
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.getContentPane().add(panel);
-        window.pack();
-        window.setVisible(true);
-        window.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		bannerPanel = new BannerPanel();
+		pane.add(bannerPanel, BorderLayout.PAGE_START); // gia na mpei panw
+		
+		xPanel = new PlayerPanel(1);
+		pane.add(xPanel, BorderLayout.LINE_START);
+		
+		oPanel = new PlayerPanel(2);
+		pane.add(oPanel, BorderLayout.LINE_END);
+		
+		boardPanel = new GameBoardPanel();
+		pane.add(boardPanel, BorderLayout.CENTER);
+		boardPanel.setVisible(true);
+		
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        
+        this.setSizes();
+        setVisible(true);
+        
 	
+	}
+	
+	private void setSizes() {
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		setMinimumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
+		setMaximumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
+		bannerPanel.setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT/10));
+		xPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
+		oPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
+		boardPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/2, 9*WINDOW_HEIGHT/10));
 	}
 }

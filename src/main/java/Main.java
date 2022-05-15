@@ -10,7 +10,7 @@ public class Main {
 		Player b = new Player("Harry");
 		a.addPlayer(b);
 		
-		new MainWindow(2);
+		new MainWindow();
 
 	}
 
