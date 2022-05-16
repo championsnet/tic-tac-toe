@@ -22,7 +22,7 @@ public class MainWindow extends JFrame {
     private final PlayerPanel oPanel;  // gia o
     
 
-	//private final JPanel hofPanel; // gia hall of fame
+	private final HallOfFamePanel hofPanel; // gia hall of fame
     private final GameBoardPanel boardPanel; // gia kuriws paixnidi
 	
 	
@@ -41,8 +41,11 @@ public class MainWindow extends JFrame {
 		pane.add(oPanel, BorderLayout.LINE_END);
 		
 		boardPanel = new GameBoardPanel();
-		pane.add(boardPanel, BorderLayout.CENTER);
-		boardPanel.setVisible(true);
+		//pane.add(boardPanel, BorderLayout.CENTER);
+		boardPanel.setVisible(false);
+		
+		hofPanel = new HallOfFamePanel();
+		pane.add(hofPanel, BorderLayout.CENTER);
 		
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
@@ -78,5 +81,9 @@ public class MainWindow extends JFrame {
 
 	public GameBoardPanel getBoardPanel() {
 		return boardPanel;
+	}
+	
+	public HallOfFamePanel getHofPanel() {
+		return hofPanel;
 	}
 }

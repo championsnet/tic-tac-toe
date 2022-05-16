@@ -137,7 +137,6 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	public void setCell(int x, int y, int player) {
 		if (player == 1) model.setValueAt(xIcon, x, y);
 		else model.setValueAt(oIcon, x, y);
-		System.out.println(xIcon);
 	}
 	
 	public void setBoardVisible(boolean state) {
