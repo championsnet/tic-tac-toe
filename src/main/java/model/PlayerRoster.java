@@ -43,6 +43,11 @@ public class PlayerRoster implements PlayerRosterDao{
 	@Override
 	// edw otan ftasoume sto shmeio auto tha ginetai elegxos prwta an uparxei to onoma
 	public boolean addPlayer(String name) {
+		// Mexri 20 characters epitrepoume sto onoma
+		if (name.length() > 20) {
+			System.out.println("Too many character (>20)!");
+			return false;
+		}
 		if (getPlayer(name) != null) {
 			System.out.println("Player with name: " + name + " already exists");
 			return false;

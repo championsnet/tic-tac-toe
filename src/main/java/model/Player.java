@@ -1,6 +1,8 @@
 package main.java.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Player {
 
@@ -9,8 +11,7 @@ public class Player {
 	private int wins;
 	private int loses;
 	private float score;
-	private ArrayList<GameRecord> recentGames;
-	private ArrayList<GameRecord> bestGames;
+	private ArrayList<GameRecord> gameRecords;
 	
 	
 	public Player(String name) {
@@ -19,21 +20,18 @@ public class Player {
 		this.games = 0;
 		this.wins = 0;
 		this.loses = 0;
-		this.recentGames = new ArrayList<GameRecord>();
-		this.bestGames = new ArrayList<GameRecord>();
+		this.gameRecords = new ArrayList<GameRecord>();
 		this.score = 0;
 	}
 	
 	
-	public Player(String name, int games, int wins, int loses, ArrayList<GameRecord> recentGames,
-			ArrayList<GameRecord> bestGames) {
+	public Player(String name, int games, int wins, int loses, ArrayList<GameRecord> gameRecords) {
 		super();
 		this.name = name;
 		this.games = games;
 		this.wins = wins;
 		this.loses = loses;
-		this.recentGames = recentGames;
-		this.bestGames = bestGames;
+		this.gameRecords = gameRecords;
 	}
 
 
@@ -59,18 +57,50 @@ public class Player {
 	public float getScore() {
 		return score;
 	}
-
 	
-	public ArrayList<GameRecord> getRecentGames() {
+	
+	public float getRecentScore() {
+		GameRecord last = getGameRecords().get(getGameRecords().size()-1);
+		if (last.getPlayerX() == getName()) return last.getScoreX();
+		else return last.getScoreO();
+	}
+	
+	
+	public void addGameRecord(GameRecord record) {
+		getGameRecords().add(record);
+	}
+	
+	
+	public ArrayList<GameRecord> getGameRecords() {
+		return gameRecords;
+	}
+
+	// Return last i records from newest to oldest
+	public ArrayList<GameRecord> getRecentGames(int number) {
+		ArrayList<GameRecord> recentGames = new ArrayList<GameRecord>();
+		for (int i=0; i<Integer.min(number, getGameRecords().size()); i++) {
+			recentGames.add(getGameRecords().get(getGameRecords().size() - i - 1));
+		}
 		return recentGames;
 	}
 
 	
-	public ArrayList<GameRecord> getBestGames() {
+	public ArrayList<GameRecord> getBestGames(int games) {
+		ArrayList<GameRecord> bestGames = new ArrayList<GameRecord>();
+		
+		// All relative scores and their respective indices
+		int[][] relativeScores = new int[gameRecords.size()][2];
+		int i = 0;
+		for (GameRecord record : gameRecords) { 		      
+			relativeScores[i][0] = record.getRelativeScore(getName());
+			relativeScores[i][1] = i;
+			i++;
+	    }
+		Arrays.sort(relativeScores, Comparator.comparingDouble(o -> o[0]));
+		for (i = 0; i < games; i++) bestGames.add(gameRecords.get(relativeScores[games-i-1][1]));
+		
 		return bestGames;
 	}
-
-
 	
 	public void setGames(int games) {
 		this.games = games;
@@ -98,13 +128,8 @@ public class Player {
 	}
 
 
-	public void setRecentGames(ArrayList<GameRecord> recentGames) {
-		this.recentGames = recentGames;
-	}
-
-
-	public void setBestGames(ArrayList<GameRecord> bestGames) {
-		this.bestGames = bestGames;
+	public void setGameRecords(ArrayList<GameRecord> gameRecords) {
+		this.gameRecords = gameRecords;
 	}
 	
 	
