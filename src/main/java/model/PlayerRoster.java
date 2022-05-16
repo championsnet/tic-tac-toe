@@ -1,7 +1,25 @@
 package main.java.model;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class PlayerRoster implements PlayerRosterDao{
 	
@@ -9,7 +27,166 @@ public class PlayerRoster implements PlayerRosterDao{
 
 	public PlayerRoster(){
 		players = new ArrayList<Player>();
-		// edw 8a fortonoume apo arxeio
+		
+		// Load Player Roster from file
+		try {  
+			//creating a constructor of file class and parsing an XML file  
+			File file = new File("resources\\tuctactoe.ser");  
+			//an instance of factory that gives a document builder  
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();  
+			//an instance of builder to parse the specified xml file  
+			DocumentBuilder db = dbf.newDocumentBuilder();  
+			Document doc = db.parse(file);  
+			doc.getDocumentElement().normalize(); 
+			
+			NodeList nodeList = doc.getElementsByTagName("player");
+			
+			for (int itr = 0; itr < nodeList.getLength(); itr++) {  
+				Node node = nodeList.item(itr);   
+				if (node.getNodeType() == Node.ELEMENT_NODE) {  
+					Element e = (Element) node;  
+					String name = e.getElementsByTagName("name").item(0).getTextContent();
+					int games = Integer.parseInt(e.getElementsByTagName("games").item(0).getTextContent());
+					int wins = Integer.parseInt(e.getElementsByTagName("wins").item(0).getTextContent());
+					int loses = Integer.parseInt(e.getElementsByTagName("loses").item(0).getTextContent());
+					ArrayList<GameRecord> records = new ArrayList<GameRecord>();
+					
+					NodeList nodeListRecs = doc.getElementsByTagName("record");
+					for (int jtr = 0; jtr < nodeListRecs.getLength(); jtr++) {
+						Node nodeRec = nodeListRecs.item(jtr);  
+						if (nodeRec.getNodeType() == Node.ELEMENT_NODE) {  
+							Element er = (Element) nodeRec; 
+							String playerX = er.getElementsByTagName("playerX").item(0).getTextContent();
+							String playerO = er.getElementsByTagName("playerO").item(0).getTextContent();
+							char result = er.getElementsByTagName("result").item(0).getTextContent().charAt(0);
+							float scoreX = Float.parseFloat(er.getElementsByTagName("scoreX").item(0).getTextContent());
+							float scoreO = Float.parseFloat(er.getElementsByTagName("scoreO").item(0).getTextContent());
+							String timestamp = er.getElementsByTagName("timestamp").item(0).getTextContent();
+							
+							GameRecord record = new GameRecord(playerX, playerO, result, scoreX, scoreO, timestamp);
+							records.add(record);
+							System.out.println(playerX+":"+ playerO+":"+ result);
+						}
+					}
+					Player player = new Player(name, games, wins, loses, records);
+					players.add(player);
+				}  
+			}   
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public void savePlayerRoster() {
+		try {
+
+	        DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder build = dFact.newDocumentBuilder();
+	        Document doc = build.newDocument();
+
+	        Element root = doc.createElement("playerRoster");
+	        doc.appendChild(root);
+	        
+	        for (Player pl : players) {
+	        	Element player = doc.createElement("player");
+		        root.appendChild(player);
+
+	            Element name = doc.createElement("name");
+	            name.appendChild(doc.createTextNode(String.valueOf(pl
+	                    .getName())));
+	            player.appendChild(name);
+
+	            Element games = doc.createElement("games");
+	            games.appendChild(doc.createTextNode(String.valueOf(pl
+	                    .getGames())));
+	            player.appendChild(games);
+	            
+	            Element wins = doc.createElement("wins");
+	            wins.appendChild(doc.createTextNode(String.valueOf(pl
+	                    .getGames())));
+	            player.appendChild(wins);
+	            
+	            Element loses = doc.createElement("loses");
+	            loses.appendChild(doc.createTextNode(String.valueOf(pl
+	                    .getGames())));
+	            player.appendChild(loses);
+	            
+	            Element score = doc.createElement("score");
+	            score.appendChild(doc.createTextNode(String.valueOf(pl
+	                    .getGames())));
+	            player.appendChild(score);
+	            
+	            Element records = doc.createElement("records");
+	            player.appendChild(records);
+	            
+	            for (GameRecord rec : pl.getGameRecords()) {
+	            	Element record = doc.createElement("record");
+		            records.appendChild(record);
+		            
+	            	Element playerx = doc.createElement("playerX");
+	            	playerx.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getPlayerX())));
+	            	record.appendChild(playerx);
+		            
+		            Element playero = doc.createElement("playerO");
+		            playero.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getPlayerO())));
+		            record.appendChild(playero);
+		            
+		            Element result = doc.createElement("result");
+		            result.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getResult())));
+		            record.appendChild(result);
+		            
+		            Element scorex = doc.createElement("scoreX");
+		            scorex.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getScoreX())));
+		            record.appendChild(scorex);
+		            
+		            Element scoreo = doc.createElement("scoreO");
+		            scoreo.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getScoreO())));
+		            record.appendChild(scoreo);
+		            
+		            Element timestamp = doc.createElement("timestamp");
+		            timestamp.appendChild(doc.createTextNode(String.valueOf(rec
+		                    .getTimestamp())));
+		            record.appendChild(timestamp);
+	            }
+	        }
+
+	        // Save the document to the disk file
+	        TransformerFactory tranFactory = TransformerFactory.newInstance();
+	        Transformer aTransformer = tranFactory.newTransformer();
+
+	        // format the XML nicely
+	        aTransformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
+
+	        aTransformer.setOutputProperty(
+	                "{http://xml.apache.org/xslt}indent-amount", "4");
+	        aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+	        DOMSource source = new DOMSource(doc);
+	        try {
+	            // location and name of XML file you can change as per need
+	            FileWriter fos = new FileWriter("resources\\tuctactoe.ser");
+	            StreamResult result = new StreamResult(fos);
+	            aTransformer.transform(source, result);
+
+	        } catch (IOException e) {
+
+	            e.printStackTrace();
+	        }
+
+	    } catch (TransformerException ex) {
+	        System.out.println("Error outputting document");
+
+	    } catch (ParserConfigurationException ex) {
+	        System.out.println("Error building document");
+	    }
 	}
 	   
 	   
@@ -58,7 +235,7 @@ public class PlayerRoster implements PlayerRosterDao{
 		return true;
 	}
 	
-	//TODO Define getHallofFame()  
+	@Override 
 	public Player[] getHallOfFame() {
 		Player[] hof = new Player[10];
 		ArrayList<Player> sortedPlayers = players;
