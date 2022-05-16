@@ -4,7 +4,6 @@ package main.java.view;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
@@ -43,13 +42,12 @@ public class MainWindow extends JFrame {
 		pane.add(oPanel, BorderLayout.LINE_END);
 		
 		boardPanel = new GameBoardPanel();
-		pane.add(boardPanel, BorderLayout.CENTER);
 		boardPanel.setVisible(false);
 		
 		hofPanel = new HallOfFamePanel();
-		//pane.add(hofPanel, BorderLayout.CENTER);
 		
 		mainPanel = new JPanel();
+		mainPanel.setBackground(hofPanel.getBackground());
 		mainPanel.add(boardPanel, BorderLayout.LINE_START);
 		mainPanel.add(hofPanel, BorderLayout.LINE_END);
 		JLayeredPane lp = new JLayeredPane();

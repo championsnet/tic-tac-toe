@@ -88,7 +88,13 @@ public class Player {
 	
 	// Score is set automatically based on wins, ties, loses
 	public void setScore() {
+		if (getGames() == 0) this.score = 0;
 		this.score = 50 * (2 * getWins() + (getGames() - getWins() - getLoses())) / getGames();
+	}
+	
+	// Have a choice to set score manually (Mostly for testing purposes)
+	public void setScore(float score) {
+		this.score = score;
 	}
 
 

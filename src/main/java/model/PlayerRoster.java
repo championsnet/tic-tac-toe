@@ -1,6 +1,7 @@
 package main.java.model;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class PlayerRoster implements PlayerRosterDao{
 	
@@ -55,8 +56,18 @@ public class PlayerRoster implements PlayerRosterDao{
 	//TODO Define getHallofFame()  
 	public Player[] getHallOfFame() {
 		Player[] hof = new Player[10];
+		ArrayList<Player> sortedPlayers = players;
 		
+		// Sort by ascending order
+		sortedPlayers.sort(Comparator.comparing(Player::getScore));
 		
+		// Get top 10 players based on score. If there are less than 10 take those.
+		for (int i = 0; i < Integer.min(10, sortedPlayers.size()); i++) {
+			// Use sortedPlayers.size()-i-1 because we are in ascending order
+			// But we need descending and was too lazy to do it before
+			hof[i] = sortedPlayers.get(sortedPlayers.size() - i - 1);
+			System.out.println((i+1) + ". " + hof[i].getScore());
+		}
 		return hof;
 	}
 
