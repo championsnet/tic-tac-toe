@@ -7,6 +7,7 @@ import main.java.view.MainWindow;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.JButton;
 import javax.swing.JTable;
 
 public class Controller {
@@ -21,11 +22,16 @@ public class Controller {
 		this.logic = l;
 		this.view = v;
 		JTable table = view.getBoardPanel().getTable();
-		initController(table, board, logic, view);
+		JButton ready_x = view.getxPanel().getStartButton();
+		JButton ready_o = view.getoPanel().getStartButton();
+		JButton doneBtn = view.getBannerPanel().getDoneButton();
+		JButton quit = view.getBannerPanel().getQuitButton();
+		initController(table, board, logic, view, ready_x, ready_o, doneBtn, quit);
 	}
 
 
-	public void initController(JTable table, Board board, GameLogic logic, MainWindow view) {
+	public void initController(JTable table, Board board, GameLogic logic, MainWindow view, JButton ready_x, JButton ready_o, JButton doneBtn, JButton quit) {
+		
 		
 		table.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
@@ -33,30 +39,85 @@ public class Controller {
 				int row = target.rowAtPoint(e.getPoint());
 				int col = target.columnAtPoint(e.getPoint());
 				
-				// Check if cell is empty when you press
-				if (logic.isEmpty(row, col)){
-					// Fill array in logic
-					logic.move(row, col, board);
-					// Fill gui table
-					view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
-					// Check if someone won or if all positions are filled
-					if (logic.isFinished(board)){
-						System.out.println("Game finished");
-						if (board.getState() == 'x' || board.getState() == 'o') {
-							System.out.println("Player " + board.getState() + " won!");
-						}
-						else
-							System.out.println("It is a tie...");
-						// to be replaced
-						System.exit(0);
+				
+				if (logic.isDone()){
+					logic.resetTable();
+					board.setFilledPos(0);
+					board.setState('T');
+					logic.setDone();
+					logic.setStartO();
+					logic.setStartX();
+					if (board.getCurrentPlayer() == 'o') {
+						board.setCurrentPlayer();
 					}
-					// Increase filled positions
-					board.setFilledPos(board.getFilledPos() + 1);
-					// Change player
-					board.setCurrentPlayer();
+				}
+				if (logic.isStarting()) {
+					// Check if cell is empty when you press
+					if (logic.isEmpty(row, col)){
+						// Fill array in logic
+						logic.move(row, col, board);
+						// Fill gui table
+						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
+						// Check if someone won or if all positions are filled
+						if (logic.isFinished(board)){
+							System.out.println("Game finished");
+							if (board.getState() == 'x' || board.getState() == 'o') {
+								System.out.println("Player " + board.getState() + " won!");
+								logic.setStartO();
+								logic.setStartX();
+							}
+							else if (board.getState() == 'T') {
+								System.out.println("It is a tie...");
+								logic.setStartO();
+								logic.setStartX();
+								// to be replaced
+								//System.exit(0);
+							}
+						}
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						// Change player
+						board.setCurrentPlayer();
+					}
+				}
+				
+			}
+		});
+		
+		ready_x.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				System.out.println("Player x ready...");
+				logic.setStartX();
+				if (logic.isStarting()){
+					view.switchMainPanel();
 				}
 			}
 		});
 		
+		ready_o.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				System.out.println("Player o ready...");
+				logic.setStartO();
+				if (logic.isStarting()){
+					view.switchMainPanel();
+				}
+			}
+		});
+		
+		
+		doneBtn.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				if (logic.isFinished(board)) {
+					view.getBoardPanel().resetBoard();
+					logic.setDone();
+				}
+			}
+		});
+		
+		quit.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				System.exit(0);
+			}
+		});
 	}
 }
