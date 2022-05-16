@@ -6,6 +6,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 // Suppress to enoxlitiko warning gia serialization
@@ -100,5 +101,32 @@ public class MainWindow extends JFrame {
 		hofPanel.setVisible(!hofPanel.isVisible());
 		if (boardPanel.isVisible()) mainPanel.setBackground(boardPanel.getBackground());
 		else mainPanel.setBackground(hofPanel.getBackground());
+	}
+	
+	public String selectPlayerDialog(String[] players, char side) {
+		if (players.length == 0) return "Shouldn't be here";
+		String getPlayer = (String) JOptionPane.showInputDialog(
+                this,
+                "Select player playing the " + side + "s",
+                "Select Player " + side,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                players,
+                players[0]);
+		
+		return getPlayer;
+	}
+	
+	public String addPlayerDialog() {
+		String newPlayer = (String) JOptionPane.showInputDialog(
+                this,
+                "Enter new player name:",
+                "Add Player",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                null,
+                null);
+		
+		return newPlayer;
 	}
 }
