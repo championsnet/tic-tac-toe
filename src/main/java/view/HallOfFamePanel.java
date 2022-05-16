@@ -18,6 +18,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.border.MatteBorder;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
@@ -47,7 +48,7 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 		// O pinakas pou prosomoiwnei to hall of fame
 		String[][] hof = new String[10][3];
 		for (int i = 0; i < 10; i++) {
-			hof[i][0] = i + ".";
+			hof[i][0] = (i+1) + ".";
 			hof[i][1] = "N/A";
 			hof[i][2] = 0 + "";
 		}
@@ -62,29 +63,24 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 			public boolean isCellEditable(int row, int column) {                
 				return false;               
 			};
-			
-			// We don't want borders now
-			public Component prepareRenderer(
-					TableCellRenderer renderer, int row, int column)
-	        	{
-	                Component c = super.prepareRenderer(renderer, row, column);
-	                JComponent jc = (JComponent)c;
-
-	                jc.setBorder(new MatteBorder(0, 0, 0, 0, Color.GRAY));
-	                return c;
-	            }
 		};
+		
+		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+		centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+		for (int x=0;x<3;x++){
+			hallTable.getColumnModel().getColumn(x).setCellRenderer( centerRenderer );
+	    }
 		
 		// Disable selection color
 		hallTable.setSelectionBackground(new Color(0f,0f,0f,0f));
-		hallTable.setRowHeight(30);
-		hallTable.getColumnModel().getColumn(0).setWidth(30);
-		hallTable.getColumnModel().getColumn(1).setWidth(300);
-		hallTable.getColumnModel().getColumn(2).setWidth(20);
+		hallTable.setRowHeight(40);
+		hallTable.getColumnModel().getColumn(0).setPreferredWidth(30);
+		hallTable.getColumnModel().getColumn(1).setPreferredWidth(300);
+		hallTable.getColumnModel().getColumn(2).setPreferredWidth(40);
 		hallTable.setShowGrid(false);
 		hallTable.setIntercellSpacing(new Dimension(0, 10));
 		hallTable.setBackground(getBackground());
-		
+		hallTable.setFont(new Font(FONT_NAME, Font.PLAIN, 16));
 		
 		
 		model = (DefaultTableModel) hallTable.getModel();
@@ -92,7 +88,17 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 		add(hallTable);
 		
 		hallTable.setAlignmentX(CENTER_ALIGNMENT);
-		//hallTable.setMaximumSize(new Dimension(360, 360));
+		hallTable.setMaximumSize(new Dimension(370, 400));
+	
+	}
+	
+	public void setPlayer(int position, String player, int score) {
+		model.setValueAt(player, position, 1);
+		model.setValueAt(score, position, 2);
+	}
+	
+	public void setHofVisible(boolean state) {
+		setVisible(state);
 	}
 
 }

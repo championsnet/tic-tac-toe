@@ -37,8 +37,8 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	
 	public GameBoardPanel() {
 		
-		String pathX = "./src/main/resources/x.png";
-		String pathO = "./src/main/resources/o.png";
+		String pathX = "src\\main\\resources\\x.png";
+		String pathO = "src\\main\\resources\\o.png";
 		// Exception an gia kapoio logo de mporei na fortwsei h eikona
 		try {
 			BufferedImage xPic = ImageIO.read(new File(pathX));
@@ -48,7 +48,6 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));

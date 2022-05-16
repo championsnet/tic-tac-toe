@@ -58,8 +58,8 @@ public class PlayerPanel extends javax.swing.JPanel {
 		selectPlayerButton.setAlignmentX(CENTER_ALIGNMENT);
 		
 		// Initialize player icon
-		String path = "./src/main/resources/x.png";
-		if (side == 2) path = "./src/main/resources/o.png";
+		String path = "src\\main\\resources\\x.png";
+		if (side == 2) path = "src\\main\\resources\\o.png";
 		JLabel picLabel;
 		// Exception an gia kapoio logo de mporei na fortwsei h eikona
 		try {
