@@ -5,10 +5,10 @@ import java.util.HashMap;
 
 final public class Board {
 	// Ari8mos mi kenwn thesewn
-	private final int filledPos;
+	private int filledPos;
 	private char state;
 	// autos pou paizei
-	private final char currentPlayer;
+	private char currentPlayer;
 	
 	
 	public Board(int filledPos, char state, char currentPlayer) {
@@ -32,15 +32,18 @@ final public class Board {
 		return currentPlayer;
 	}
 	
-	public char nextPlayer() {
-		if (this.state == 'x'){
-			return 'o';
+	public void setCurrentPlayer() {
+		if (this.currentPlayer == 'x'){
+			this.currentPlayer = 'o';
 		}
 		else {
-			return 'x';
+			this.currentPlayer = 'x';
 		}
 	}
 	
+	public void setFilledPos(int pos) {
+		this.filledPos = pos;
+	}
 	
 	public void setState(char s) {
 		this.state = s;
