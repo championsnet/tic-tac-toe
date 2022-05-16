@@ -8,6 +8,7 @@ public class Player {
 	private int games;
 	private int wins;
 	private int loses;
+	private float score;
 	private ArrayList<GameRecord> recentGames;
 	private ArrayList<GameRecord> bestGames;
 	
@@ -20,6 +21,7 @@ public class Player {
 		this.loses = 0;
 		this.recentGames = new ArrayList<GameRecord>();
 		this.bestGames = new ArrayList<GameRecord>();
+		this.score = 0;
 	}
 	
 	
@@ -53,6 +55,10 @@ public class Player {
 	public int getLoses() {
 		return loses;
 	}
+	
+	public float getScore() {
+		return score;
+	}
 
 	
 	public ArrayList<GameRecord> getRecentGames() {
@@ -78,6 +84,11 @@ public class Player {
 
 	public void setLoses(int loses) {
 		this.loses = loses;
+	}
+	
+	// Score is set automatically based on wins, ties, loses
+	public void setScore() {
+		this.score = 50 * (2 * getWins() + (getGames() - getWins() - getLoses())) / getGames();
 	}
 
 

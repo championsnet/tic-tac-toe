@@ -25,7 +25,7 @@ public class MainWindow extends JFrame {
     
     private final JPanel mainPanel; // 8a exei to hof kai to board to ena panw sto allo
 	private final HallOfFamePanel hofPanel; // gia hall of fame
-    private final GameBoardPanel boardPanel; // gia kuriws paixnidi
+    private GameBoardPanel boardPanel; // gia kuriws paixnidi
 	
 	
 	public MainWindow() {

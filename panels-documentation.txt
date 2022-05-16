@@ -12,3 +12,4 @@ view.getBoardPanel().setMessage(String message) - Set message to be shown in top
 view.getBoardPanel().getTable() - Get board table (mainly to add listener)
 view.getBoardPanel().setCell(int x, int y, int player) - Set a move on specific cell x,y (player = 1: X, player = 2: O)
 view.getBoardPanel().setBoardVisible(boolean state) - Set visibility of panel (to switch between Hall of Fame and Game Board)
+view.getBoardPanel().resetBoard() - Resets board to empty

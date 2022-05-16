@@ -1,5 +1,6 @@
 package main.java.model;
 
+
 public class GameRecord {
 
 	// Mporei na allaksei se object references pio meta
@@ -8,18 +9,20 @@ public class GameRecord {
 	private char result;
 	private float scoreX;
 	private float scoreO;
-	private float duration;
+	private String timestamp;
 	
 	
 	// Mia fora orizontai ta dedomena kathe record opote de xreiazontai setters
-	public GameRecord(String playerX, String playerO, char result, float scoreX, float scoreO, float duration) {
+	public GameRecord(String playerX, String playerO, char result, float scoreX, float scoreO, String timestamp) {
 		super();
 		this.playerX = playerX;
 		this.playerO = playerO;
 		this.result = result;
 		this.scoreX = scoreX;
 		this.scoreO = scoreO;
-		this.duration = duration;
+		
+		// Metatropi string se localdatetime
+		this.timestamp = timestamp;
 	}
 	
 	
@@ -48,8 +51,8 @@ public class GameRecord {
 	}
 
 
-	public float getDuration() {
-		return duration;
+	public String getTimestamp() {
+		return timestamp;
 	}
 	
 	

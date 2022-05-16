@@ -32,6 +32,7 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	private Icon oIcon;
 	private final JLabel messageLbl;
 	private JTable table;
+	private Object[][] initBoard;
 	
 	private static final String FONT_NAME = "SansSerif";
 	
@@ -61,9 +62,10 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		
 		// O pinakas pou prosomoiwnei to board arxika kenos
 		Object[][] board = {{null, null, null}, {null, null, null}, {null, null, null}};
+		initBoard = board;
 		
 		// prepei na kanoume override ton renderer gia na emfanisoume eikones
-		model = new DefaultTableModel(board, board[0]) {
+		model = new DefaultTableModel(initBoard, board[0]) {
 			@Override
 		    public Class<?> getColumnClass(int column) {
 		        return Icon.class;
@@ -140,6 +142,10 @@ public class GameBoardPanel extends javax.swing.JPanel {
 	
 	public void setBoardVisible(boolean state) {
 		setVisible(state);
+	}
+	
+	public void resetBoard() {
+		model.setDataVector(initBoard, initBoard[0]);
 	}
 	
 }

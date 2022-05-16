@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public interface PlayerRosterDao {
 	public ArrayList<Player> getAllPlayers();
 	public Player getPlayer(String name);
-	public void addPlayer(Player student);
-	public void deletePlayer(Player student);
+	public boolean addPlayer(String name);
+	public boolean deletePlayer(String name);
+	public Player[] getHallOfFame();
 }

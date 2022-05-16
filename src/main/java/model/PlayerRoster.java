@@ -13,9 +13,14 @@ public class PlayerRoster implements PlayerRosterDao{
 	   
 	   
 	@Override
-	public void deletePlayer(Player player) {
-	   players.remove(player);
-	   System.out.println("Player: " + player.getName() + ", deleted from database");
+	public boolean deletePlayer(String name) {
+		if (getPlayer(name) == null) {
+			System.out.println("Player with name: " + name + " does not exist");
+			return false;
+		}
+		players.remove(getPlayer(name));
+		System.out.println("Player: " + name + ", deleted from database");
+		return true;
 	}
 
 	//retrive list of players from the database
@@ -36,11 +41,23 @@ public class PlayerRoster implements PlayerRosterDao{
 
 	@Override
 	// edw otan ftasoume sto shmeio auto tha ginetai elegxos prwta an uparxei to onoma
-	public void addPlayer(Player player) {
+	public boolean addPlayer(String name) {
+		if (getPlayer(name) != null) {
+			System.out.println("Player with name: " + name + " already exists");
+			return false;
+		}
+		Player player = new Player(name);
 		players.add(player);
 		System.out.println("Player: " + player.getName() + ", added in the database");
+		return true;
 	}
 	
 	//TODO Define getHallofFame()  
+	public Player[] getHallOfFame() {
+		Player[] hof = new Player[10];
+		
+		
+		return hof;
+	}
 
 }
