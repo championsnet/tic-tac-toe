@@ -75,7 +75,8 @@ public class Player {
 		return gameRecords;
 	}
 
-	// Return last i records from newest to oldest
+	// Return last i records from newest to oldest.
+	// The way records are saved the oldest ones are first
 	public ArrayList<GameRecord> getRecentGames(int number) {
 		ArrayList<GameRecord> recentGames = new ArrayList<GameRecord>();
 		for (int i=0; i<Integer.min(number, getGameRecords().size()); i++) {
@@ -84,7 +85,9 @@ public class Player {
 		return recentGames;
 	}
 
-	
+	// Get n best games by utilizing a new array with respective indices
+	// and sorting and then returning according to the sorted indices
+	// Complexity is still nlogn but uses more memory alla siga
 	public ArrayList<GameRecord> getBestGames(int games) {
 		ArrayList<GameRecord> bestGames = new ArrayList<GameRecord>();
 		
@@ -117,6 +120,7 @@ public class Player {
 	}
 	
 	// Score is set automatically based on wins, ties, loses
+	// Ties = Games - Wins - Loses
 	public void setScore() {
 		if (getGames() == 0) this.score = 0;
 		this.score = 50 * (2 * getWins() + (getGames() - getWins() - getLoses())) / getGames();

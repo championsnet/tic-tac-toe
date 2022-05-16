@@ -28,24 +28,23 @@ public class GameRecord {
 		// Metatropi string se localdatetime
 		this.timestamp = timestamp;
 		
+		// Texnito score ka8e partidas gia na sygkrinoume paixnidia
+		// Paizoume me takseis mege8ous wste na sevomaste ta vimata
+		// sygkrisis stis odigies ths ekfwnishs
 		if (result == 'X') {
-			this.relativeScoreX = 10000;
-			this.relativeScoreO = 100;
-		}
-		else if (result == 'T') {
-			this.relativeScoreX = 1000;
+			this.relativeScoreX = 100000;
 			this.relativeScoreO = 1000;
 		}
-		else {
-			this.relativeScoreX = 100;
+		else if (result == 'T') {
+			this.relativeScoreX = 10000;
 			this.relativeScoreO = 10000;
 		}
-		if (scoreX >= scoreO) {
-			this.relativeScoreX += 10;
-		}
 		else {
-			this.relativeScoreO += 10;
+			this.relativeScoreX = 1000;
+			this.relativeScoreO = 100000;
 		}
+		this.relativeScoreX += scoreO;
+		this.relativeScoreO += scoreX;
 		
 	}
 	
@@ -86,7 +85,7 @@ public class GameRecord {
 	public int getRelativeScoreO() {
 		return relativeScoreO;
 	}
-	
+
 	public int getRelativeScore(String name) {
 		if (name == playerX) return relativeScoreX;
 		else return relativeScoreO;

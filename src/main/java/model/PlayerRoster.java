@@ -28,7 +28,7 @@ public class PlayerRoster implements PlayerRosterDao{
 	public PlayerRoster(){
 		players = new ArrayList<Player>();
 		
-		// Load Player Roster from file
+		// Load Player Roster from XML file
 		try {  
 			//creating a constructor of file class and parsing an XML file  
 			File file = new File("resources\\tuctactoe.ser");  
@@ -40,7 +40,7 @@ public class PlayerRoster implements PlayerRosterDao{
 			doc.getDocumentElement().normalize(); 
 			
 			NodeList nodeList = doc.getElementsByTagName("player");
-			
+			// Manually load data from xml to appropriate structures cuz Java sucks
 			for (int itr = 0; itr < nodeList.getLength(); itr++) {  
 				Node node = nodeList.item(itr);   
 				if (node.getNodeType() == Node.ELEMENT_NODE) {  
@@ -80,6 +80,7 @@ public class PlayerRoster implements PlayerRosterDao{
 		
 	}
 	
+	// Save player roster to XML file (manually cuz Java sucks)
 	public void savePlayerRoster() {
 		try {
 
@@ -201,7 +202,7 @@ public class PlayerRoster implements PlayerRosterDao{
 		return true;
 	}
 
-	//retrive list of players from the database
+	//retrieve list of players from the database
 	@Override
 	public ArrayList<Player> getAllPlayers() {
 	   return players;
@@ -218,7 +219,7 @@ public class PlayerRoster implements PlayerRosterDao{
 	}
 
 	@Override
-	// edw otan ftasoume sto shmeio auto tha ginetai elegxos prwta an uparxei to onoma
+	// ginetai elegxos prwta an uparxei to onoma
 	public boolean addPlayer(String name) {
 		// Mexri 20 characters epitrepoume sto onoma
 		if (name.length() > 20) {
