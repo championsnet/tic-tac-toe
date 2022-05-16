@@ -3,6 +3,9 @@ package main.java.model;
 public class GameLogic {
 	
 	private char[][] table = new char[3][3];
+	private boolean startx = false;
+	private boolean starto = false;
+	private boolean done = false;
 	
 	
 	public GameLogic(char[][] table) {
@@ -16,6 +19,30 @@ public class GameLogic {
 	}
 	
 	
+	public void resetTable(){
+		for (int i=0; i<3; i++) {
+			for (int j=0; j<3; j++) {
+				this.table[i][j] = ' ';
+			}
+		}
+	}
+	
+	
+	public void setDone() {
+		this.done = !done;
+	}
+	
+	
+	public void setStartX() {
+		this.startx = !this.startx;
+	}
+	
+	
+	public void setStartO() {
+		this.starto = !this.starto;
+	}
+	
+	
 	public void move(int x, int y, Board board) {
 		if (board.getFilledPos() % 2 == 0) {
 			this.table[x][y] = 'x';
@@ -26,6 +53,11 @@ public class GameLogic {
 			System.out.println("O on " + x + ":" + y);
 		}
 	};
+	
+	
+	public boolean isDone() {
+		return this.done;
+	}
 	
 	
 	public boolean isEmpty(int x, int y) {
@@ -73,5 +105,14 @@ public class GameLogic {
 			}
 		}
 		
+	}
+	
+	public boolean isStarting() {
+		if (this.startx && this.starto) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
