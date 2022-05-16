@@ -30,6 +30,10 @@ public class Main {
 		
 		view.getBoardPanel().setMessage("You can change me Akis");
 		
+		view.switchMainPanel();
+		view.switchMainPanel();
+		
+		
 		
 		
 		

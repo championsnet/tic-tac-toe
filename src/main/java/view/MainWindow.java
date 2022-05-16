@@ -6,6 +6,8 @@ import java.awt.Container;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 
 // Suppress to enoxlitiko warning gia serialization
 @SuppressWarnings("serial")
@@ -21,7 +23,7 @@ public class MainWindow extends JFrame {
     private final PlayerPanel xPanel;  // gia player x
     private final PlayerPanel oPanel;  // gia o
     
-
+    private final JPanel mainPanel; // 8a exei to hof kai to board to ena panw sto allo
 	private final HallOfFamePanel hofPanel; // gia hall of fame
     private final GameBoardPanel boardPanel; // gia kuriws paixnidi
 	
@@ -41,11 +43,18 @@ public class MainWindow extends JFrame {
 		pane.add(oPanel, BorderLayout.LINE_END);
 		
 		boardPanel = new GameBoardPanel();
-		//pane.add(boardPanel, BorderLayout.CENTER);
+		pane.add(boardPanel, BorderLayout.CENTER);
 		boardPanel.setVisible(false);
 		
 		hofPanel = new HallOfFamePanel();
-		pane.add(hofPanel, BorderLayout.CENTER);
+		//pane.add(hofPanel, BorderLayout.CENTER);
+		
+		mainPanel = new JPanel();
+		mainPanel.add(boardPanel, BorderLayout.LINE_START);
+		mainPanel.add(hofPanel, BorderLayout.LINE_END);
+		JLayeredPane lp = new JLayeredPane();
+		mainPanel.add(lp, BorderLayout.CENTER);
+		pane.add(mainPanel, BorderLayout.CENTER);
 		
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
@@ -64,6 +73,7 @@ public class MainWindow extends JFrame {
 		xPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
 		oPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/4, 9*WINDOW_HEIGHT/10));
 		boardPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/2, 9*WINDOW_HEIGHT/10));
+		hofPanel.setPreferredSize(new Dimension(WINDOW_WIDTH/2, 9*WINDOW_HEIGHT/10));
 	}
 	
 	
@@ -85,5 +95,12 @@ public class MainWindow extends JFrame {
 	
 	public HallOfFamePanel getHofPanel() {
 		return hofPanel;
+	}
+	
+	public void switchMainPanel() {
+		boardPanel.setVisible(!boardPanel.isVisible());
+		hofPanel.setVisible(!hofPanel.isVisible());
+		if (boardPanel.isVisible()) mainPanel.setBackground(boardPanel.getBackground());
+		else mainPanel.setBackground(hofPanel.getBackground());
 	}
 }

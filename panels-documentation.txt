@@ -1,3 +1,6 @@
+Main Window:
+view.switchMainPanel() - Swap between Hall of Fame and Game Board
+
 Hall of Fame:
 view.getHofPanel() - Get entire Panel
 view.getHofPanel().setPlayer(int position, String player, int score) - In Hall of Fame set a player in a position with a score
