@@ -6,6 +6,7 @@ import main.java.view.MainWindow;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JTable;
@@ -15,23 +16,47 @@ public class Controller {
 	private GameLogic logic;
 	private MainWindow view;
 	private Board board;
+	private JTable table;
+	private JButton ready_x;
+	private JButton ready_o;
+	private JButton doneBtn;
+	private JButton quit;
 	
 	
 	public Controller(GameLogic l, MainWindow v, Board b) {
 		this.board = b;
 		this.logic = l;
 		this.view = v;
-		JTable table = view.getBoardPanel().getTable();
-		JButton ready_x = view.getxPanel().getStartButton();
-		JButton ready_o = view.getoPanel().getStartButton();
-		JButton doneBtn = view.getBannerPanel().getDoneButton();
-		JButton quit = view.getBannerPanel().getQuitButton();
-		initController(table, board, logic, view, ready_x, ready_o, doneBtn, quit);
+		this.table = view.getBoardPanel().getTable();
+		this.ready_x = view.getxPanel().getStartButton();
+		this.ready_o = view.getoPanel().getStartButton();
+		this.doneBtn = view.getBannerPanel().getDoneButton();
+		this.quit = view.getBannerPanel().getQuitButton();
+	}
+	
+	public JTable getTable() {
+		return this.table;
+	}
+	
+	public JButton getReadyX() {
+		return this.ready_x;
+	}
+	
+	public JButton getReadyO() {
+		return this.ready_o;
+	}
+	
+	public JButton getDoneBtn() {
+		return this.doneBtn;
+	}
+	
+	public JButton getQuit() {
+		return this.quit;
 	}
 
-
-	public void initController(JTable table, Board board, GameLogic logic, MainWindow view, JButton ready_x, JButton ready_o, JButton doneBtn, JButton quit) {
-		
+	public void runPlayerVsPlayer(JTable table, Board board, GameLogic logic, MainWindow view, JButton ready_x, JButton ready_o, JButton doneBtn, JButton quit) {
+		ArrayList<Board> boards = new ArrayList<Board>();
+		boards.add(board);
 		
 		table.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
@@ -76,6 +101,8 @@ public class Controller {
 								logic.setStartX();
 							}
 						}
+						Board newBoard = new Board(board.getFilledPos() + 1, board.getState(), board.getCurrentPlayer());
+						boards.add(newBoard);
 					}
 				}
 				
