@@ -73,7 +73,7 @@ public class GameLogic {
 	
 	public boolean isFinished(Board board) {
 	
-		if (board.getFilledPos() + 1 < 5){
+		if (board.getFilledPos() < 5){
 			return false;
 		}
 		
@@ -97,7 +97,7 @@ public class GameLogic {
 				board.setState(board.getCurrentPlayer());
 				return true;
 			}
-			else if (board.getFilledPos() + 1 == 9) {
+			else if (board.getFilledPos() == 9) {
 				return true;
 			}
 			else {

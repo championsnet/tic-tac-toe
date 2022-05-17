@@ -56,6 +56,10 @@ public class Controller {
 					if (logic.isEmpty(row, col)){
 						// Fill array in logic
 						logic.move(row, col, board);
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						// Change player
+						board.setCurrentPlayer();
 						// Fill gui table
 						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
 						// Check if someone won or if all positions are filled
@@ -72,10 +76,6 @@ public class Controller {
 								logic.setStartX();
 							}
 						}
-						// Increase filled positions
-						board.setFilledPos(board.getFilledPos() + 1);
-						// Change player
-						board.setCurrentPlayer();
 					}
 				}
 				
