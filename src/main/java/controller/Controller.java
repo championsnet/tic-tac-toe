@@ -45,39 +45,37 @@ public class Controller {
 					board.setFilledPos(0);
 					board.setState('T');
 					logic.setDone();
-					logic.setStartO();
-					logic.setStartX();
 					if (board.getCurrentPlayer() == 'o') {
 						board.setCurrentPlayer();
 					}
 				}
+				
+				// Check if both players pressed ready
 				if (logic.isStarting()) {
 					// Check if cell is empty when you press
 					if (logic.isEmpty(row, col)){
 						// Fill array in logic
 						logic.move(row, col, board);
-						// Fill gui table
-						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
-						// Check if someone won or if all positions are filled
-						if (logic.isFinished(board)){
-							System.out.println("Game finished");
-							if (board.getState() == 'x' || board.getState() == 'o') {
-								System.out.println("Player " + board.getState() + " won!");
-								logic.setStartO();
-								logic.setStartX();
-							}
-							else if (board.getState() == 'T') {
-								System.out.println("It is a tie...");
-								logic.setStartO();
-								logic.setStartX();
-								// to be replaced
-								//System.exit(0);
-							}
-						}
 						// Increase filled positions
 						board.setFilledPos(board.getFilledPos() + 1);
 						// Change player
 						board.setCurrentPlayer();
+						// Fill gui table
+						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
+						// Check if someone won or if all positions are filled
+						if (logic.isFinished(board)){
+							consoleMessage("Game finished");
+							if (board.getState() == 'x' || board.getState() == 'o') {
+								consoleMessage("Player " + board.getState() + " won!");
+								logic.setStartO();
+								logic.setStartX();
+							}
+							else if (board.getState() == 'T') {
+								consoleMessage("It is a tie...");
+								logic.setStartO();
+								logic.setStartX();
+							}
+						}
 					}
 				}
 				
@@ -86,20 +84,22 @@ public class Controller {
 		
 		ready_x.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
-				System.out.println("Player x ready...");
+				consoleMessage("Player x ready...");
 				logic.setStartX();
 				if (logic.isStarting()){
-					view.switchMainPanel();
+					view.getBoardPanel().setVisible(true);
+					view.getHofPanel().setVisible(false);
 				}
 			}
 		});
 		
 		ready_o.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
-				System.out.println("Player o ready...");
+				consoleMessage("Player o ready...");
 				logic.setStartO();
 				if (logic.isStarting()){
-					view.switchMainPanel();
+					view.getBoardPanel().setVisible(true);
+					view.getHofPanel().setVisible(false);
 				}
 			}
 		});
@@ -109,6 +109,8 @@ public class Controller {
 			public void mousePressed(MouseEvent e) {
 				if (logic.isFinished(board)) {
 					view.getBoardPanel().resetBoard();
+					view.getBoardPanel().setVisible(false);
+					view.getHofPanel().setVisible(true);
 					logic.setDone();
 				}
 			}
@@ -119,5 +121,9 @@ public class Controller {
 				System.exit(0);
 			}
 		});
+	}
+	
+	public void consoleMessage(String message) {
+		System.out.println(message);
 	}
 }
