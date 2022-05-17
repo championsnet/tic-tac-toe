@@ -54,7 +54,7 @@ public class GameBoardPanel extends javax.swing.JPanel {
 		
 		messageLbl = new JLabel("<<<   X");
 		messageLbl.setAlignmentX(CENTER_ALIGNMENT);
-		messageLbl.setFont(new Font(FONT_NAME, Font.BOLD, 24));
+		messageLbl.setFont(new Font(FONT_NAME, Font.BOLD, 26));
 		
 		add(messageLbl);
 		add(Box.createRigidArea(new Dimension(0, 50)));	

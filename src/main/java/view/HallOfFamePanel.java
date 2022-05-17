@@ -1,6 +1,7 @@
 package main.java.view;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.BorderFactory;
@@ -10,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 
 import main.java.model.Player;
 
@@ -31,7 +33,7 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 		
 		titleLbl = new JLabel("Hall of Fame");
 		titleLbl.setAlignmentX(CENTER_ALIGNMENT);
-		titleLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
+		titleLbl.setFont(new Font(FONT_NAME, Font.BOLD, 26));
 		
 		add(titleLbl);
 		add(Box.createRigidArea(new Dimension(0, 20)));	
@@ -54,6 +56,18 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 			public boolean isCellEditable(int row, int column) {                
 				return false;               
 			};
+			public Component prepareRenderer(
+			        TableCellRenderer renderer, int row, int column)
+			{
+				Component c = super.prepareRenderer(renderer, row, column);
+
+			    if (row == 0) c.setFont(new Font(FONT_NAME, Font.BOLD, 22));
+			    if (row == 1) c.setFont(new Font(FONT_NAME, Font.BOLD, 18));
+			    if (row == 2) c.setFont(new Font(FONT_NAME, Font.BOLD, 16));
+			    if (row > 2) c.setFont(new Font(FONT_NAME, Font.PLAIN, 16));
+
+			    return c;
+			}
 		};
 		
 		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -72,6 +86,7 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 		hallTable.setIntercellSpacing(new Dimension(0, 10));
 		hallTable.setBackground(getBackground());
 		hallTable.setFont(new Font(FONT_NAME, Font.PLAIN, 16));
+		
 		
 		
 		model = (DefaultTableModel) hallTable.getModel();
