@@ -32,6 +32,8 @@ public class Player {
 		this.wins = wins;
 		this.loses = loses;
 		this.gameRecords = gameRecords;
+		
+		this.setScore();
 	}
 
 
@@ -59,10 +61,20 @@ public class Player {
 	}
 	
 	
-	public float getRecentScore() {
-		GameRecord last = getGameRecords().get(getGameRecords().size()-1);
-		if (last.getPlayerX() == getName()) return last.getScoreX();
-		else return last.getScoreO();
+	public String getRecentScore() {
+		if (gameRecords.size() == 0) return "-";
+		GameRecord last = gameRecords.get(gameRecords.size()-1);
+		
+		if (last.getPlayerX().equals(getName())) {
+			if (last.getResult() == 'X') return "W";
+			else if (last.getResult() == 'O') return "L";
+			else return "T";
+		}
+		else {
+			if (last.getResult() == 'X') return "L";
+			else if (last.getResult() == 'O') return "W";
+			else return "T";
+		}
 	}
 	
 	
@@ -100,14 +112,14 @@ public class Player {
 			i++;
 	    }
 		Arrays.sort(relativeScores, Comparator.comparingDouble(o -> o[0]));
-		for (i = 0; i < games; i++) bestGames.add(gameRecords.get(relativeScores[games-i-1][1]));
-		System.out.println();
+		for (i = 0; i < gameRecords.size(); i++) bestGames.add(gameRecords.get(relativeScores[gameRecords.size()-i-1][1]));
+		
 		return bestGames;
 	}
 	
 	// Get best games as string in form 'W vs xyz'
 	public String[] getBestGamesString(int games) {
-		ArrayList<GameRecord> bestGames = getBestGames(games);
+		ArrayList<GameRecord> bestGames = getRecentGames(games);
 		String[] best = new String[games];
 		for (int i = 0; i < bestGames.size(); i ++) {
 			char result = bestGames.get(i).getResult();
@@ -127,7 +139,7 @@ public class Player {
 			}			
 		}
 		// If there are not enough games, then the rest positions are returned as '-'
-		for (int i = 5; i > bestGames.size(); i--) best[i] = "-";
+		for (int i = 0; i < bestGames.size(); i++) best[games - bestGames.size() + i] = "-";
 		
 		return best;
 	}
@@ -150,7 +162,7 @@ public class Player {
 	// Ties = Games - Wins - Loses
 	public void setScore() {
 		if (getGames() == 0) this.score = 0;
-		this.score = 50 * (2 * getWins() + (getGames() - getWins() - getLoses())) / getGames();
+		else this.score = 50 * (2 * getWins() + (getGames() - getWins() - getLoses())) / getGames();
 	}
 	
 	// Have a choice to set score manually (Mostly for testing purposes)

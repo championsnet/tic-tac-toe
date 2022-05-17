@@ -66,8 +66,8 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 		hallTable.setSelectionBackground(new Color(0f,0f,0f,0f));
 		hallTable.setRowHeight(40);
 		hallTable.getColumnModel().getColumn(0).setPreferredWidth(30);
-		hallTable.getColumnModel().getColumn(1).setPreferredWidth(300);
-		hallTable.getColumnModel().getColumn(2).setPreferredWidth(40);
+		hallTable.getColumnModel().getColumn(1).setPreferredWidth(290);
+		hallTable.getColumnModel().getColumn(2).setPreferredWidth(50);
 		hallTable.setShowGrid(false);
 		hallTable.setIntercellSpacing(new Dimension(0, 10));
 		hallTable.setBackground(getBackground());
@@ -95,6 +95,7 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 	public void setHof(Player[] list) {
 		int i = 0;
 		for (Player player : list) {
+			if (player == null) return;
 			setPlayer(i, player.getName(), player.getScore());
 			i++;
 		}

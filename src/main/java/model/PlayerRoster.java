@@ -3,8 +3,10 @@ package main.java.model;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Date;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -53,7 +55,7 @@ public class PlayerRoster implements PlayerRosterDao{
 					int loses = Integer.parseInt(e.getElementsByTagName("loses").item(0).getTextContent());
 					ArrayList<GameRecord> records = new ArrayList<GameRecord>();
 					
-					NodeList nodeListRecs = doc.getElementsByTagName("record");
+					NodeList nodeListRecs = e.getElementsByTagName("record");
 					for (int jtr = 0; jtr < nodeListRecs.getLength(); jtr++) {
 						Node nodeRec = nodeListRecs.item(jtr);  
 						if (nodeRec.getNodeType() == Node.ELEMENT_NODE) {  
@@ -70,6 +72,7 @@ public class PlayerRoster implements PlayerRosterDao{
 						}
 					}
 					Player player = new Player(name, games, wins, loses, records);
+					
 					players.add(player);
 				}  
 			}   
@@ -108,17 +111,17 @@ public class PlayerRoster implements PlayerRosterDao{
 	            
 	            Element wins = doc.createElement("wins");
 	            wins.appendChild(doc.createTextNode(String.valueOf(pl
-	                    .getGames())));
+	                    .getWins())));
 	            player.appendChild(wins);
 	            
 	            Element loses = doc.createElement("loses");
 	            loses.appendChild(doc.createTextNode(String.valueOf(pl
-	                    .getGames())));
+	                    .getLoses())));
 	            player.appendChild(loses);
 	            
 	            Element score = doc.createElement("score");
 	            score.appendChild(doc.createTextNode(String.valueOf(pl
-	                    .getGames())));
+	                    .getScore())));
 	            player.appendChild(score);
 	            
 	            Element records = doc.createElement("records");
@@ -273,7 +276,6 @@ public class PlayerRoster implements PlayerRosterDao{
 			// Use sortedPlayers.size()-i-1 because we are in ascending order
 			// But we need descending and was too lazy to do it before
 			hof[i] = sortedPlayers.get(sortedPlayers.size() - i - 1);
-			System.out.println((i+1) + ". " + hof[i].getScore());
 		}
 		return hof;
 	}
@@ -306,6 +308,37 @@ public class PlayerRoster implements PlayerRosterDao{
 		else {
 			return selection.getName() + " already selected in the opposite side!";
 		}
+	}
+	
+	public void createRecords(char result) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		String timestamp  = dateFormat.format(new Date());
+		GameRecord record = new GameRecord(
+				selectedPlayerX.getName(),
+				selectedPlayerO.getName(),
+				result,
+				selectedPlayerX.getScore(),
+				selectedPlayerO.getScore(),
+				timestamp
+		);
+		
+		selectedPlayerX.setGames(selectedPlayerX.getGames()+1);
+		selectedPlayerO.setGames(selectedPlayerO.getGames()+1);
+		if (result == 'X') {
+			selectedPlayerX.setWins(selectedPlayerX.getWins()+1);
+			selectedPlayerO.setLoses(selectedPlayerO.getLoses()+1);
+		}
+		else if (result == 'O') {
+			selectedPlayerO.setWins(selectedPlayerO.getWins()+1);
+			selectedPlayerX.setLoses(selectedPlayerX.getLoses()+1);
+		}
+		selectedPlayerX.setScore();
+		selectedPlayerO.setScore();
+		
+		selectedPlayerX.addGameRecord(record);
+		selectedPlayerO.addGameRecord(record);
+		
+		this.savePlayerRoster();
 	}
 
 }

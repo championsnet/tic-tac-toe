@@ -1,1976 +1,879 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <playerRoster>
     <player>
-        <name>Mpagasas</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
+        <name>xXx_PAOKARA_xXx</name>
+        <games>10</games>
+        <wins>2</wins>
+        <loses>7</loses>
+        <score>25.0</score>
+        <records>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:53:50</timestamp>
+            </record>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:54:41</timestamp>
+            </record>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>X</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:59:59</timestamp>
+            </record>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>44.0</scoreO>
+                <timestamp>17-05-2022 22:00:05</timestamp>
+            </record>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:00:11</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>33.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 22:07:59</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>40.0</scoreX>
+                <scoreO>33.0</scoreO>
+                <timestamp>17-05-2022 22:10:01</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>45.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 22:11:36</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 22:22:28</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>T</result>
+                <scoreX>53.0</scoreX>
+                <scoreO>22.0</scoreO>
+                <timestamp>17-05-2022 22:22:57</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>Roz Natal</name>
+        <games>4</games>
+        <wins>1</wins>
+        <loses>2</loses>
+        <score>37.0</score>
+        <records>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>Tony Start</playerO>
+                <result>O</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:56:27</timestamp>
+            </record>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>Tony Start</playerO>
+                <result>T</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:56:40</timestamp>
+            </record>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>25.0</scoreX>
+                <scoreO>54.0</scoreO>
+                <timestamp>17-05-2022 22:00:23</timestamp>
+            </record>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>X</result>
+                <scoreX>16.0</scoreX>
+                <scoreO>58.0</scoreO>
+                <timestamp>17-05-2022 22:00:34</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>MIT</name>
+        <games>7</games>
+        <wins>2</wins>
+        <loses>3</loses>
+        <score>42.0</score>
+        <records>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 21:59:12</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>33.0</scoreO>
+                <timestamp>17-05-2022 21:59:23</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 21:59:32</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>37.0</scoreO>
+                <timestamp>17-05-2022 21:59:39</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>44.0</scoreO>
+                <timestamp>17-05-2022 22:17:51</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>T</result>
+                <scoreX>40.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:18:04</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>T</result>
+                <scoreX>41.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:25:06</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>kados</name>
+        <games>7</games>
+        <wins>2</wins>
+        <loses>3</loses>
+        <score>42.0</score>
         <records>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerO>kados</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:40:19</timestamp>
             </record>
             <record>
                 <playerX>Mpagasas</playerX>
+                <playerO>kados</playerO>
+                <result>T</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:40:26</timestamp>
+            </record>
+            <record>
+                <playerX>Mpagasas</playerX>
+                <playerO>kados</playerO>
+                <result>T</result>
+                <scoreX>75.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 21:41:00</timestamp>
+            </record>
+            <record>
+                <playerX>kados</playerX>
+                <playerO>33</playerO>
+                <result>O</result>
+                <scoreX>33.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 21:49:04</timestamp>
+            </record>
+            <record>
+                <playerX>kados</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>25.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:52:31</timestamp>
+            </record>
+            <record>
+                <playerX>OFI MONO RE M**NIA</playerX>
+                <playerO>kados</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 21:58:44</timestamp>
+            </record>
+            <record>
+                <playerX>OFI MONO RE M**NIA</playerX>
+                <playerO>kados</playerO>
+                <result>X</result>
+                <scoreX>42.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:58:49</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>giagia</name>
+        <games>12</games>
+        <wins>5</wins>
+        <loses>5</loses>
+        <score>50.0</score>
+        <records>
+            <record>
+                <playerX>giagia</playerX>
+                <playerO>Mpagasas</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:47:30</timestamp>
+            </record>
+            <record>
+                <playerX>giagia</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>20.0</scoreO>
+                <timestamp>17-05-2022 21:48:23</timestamp>
+            </record>
+            <record>
+                <playerX>giagia</playerX>
+                <playerO>33</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>16.0</scoreO>
+                <timestamp>17-05-2022 21:48:46</timestamp>
+            </record>
+            <record>
+                <playerX>kados</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>25.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:52:31</timestamp>
+            </record>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:53:50</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 21:59:12</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>33.0</scoreO>
+                <timestamp>17-05-2022 21:59:23</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 21:59:32</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>37.0</scoreO>
+                <timestamp>17-05-2022 21:59:39</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>44.0</scoreO>
+                <timestamp>17-05-2022 22:17:51</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>T</result>
+                <scoreX>40.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:18:04</timestamp>
+            </record>
+            <record>
+                <playerX>MIT</playerX>
+                <playerO>giagia</playerO>
+                <result>T</result>
+                <scoreX>41.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:25:06</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>Mpompiras</name>
+        <games>2</games>
+        <wins>1</wins>
+        <loses>1</loses>
+        <score>50.0</score>
+        <records>
+            <record>
+                <playerX>kurwa</playerX>
+                <playerO>Mpompiras</playerO>
+                <result>O</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:57:19</timestamp>
+            </record>
+            <record>
+                <playerX>kurwa</playerX>
+                <playerO>Mpompiras</playerO>
+                <result>X</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:24</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>33</name>
+        <games>16</games>
+        <wins>8</wins>
+        <loses>7</loses>
+        <score>53.0</score>
+        <records>
+            <record>
+                <playerX>Mr.bibi</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 20:56:36</timestamp>
+            </record>
+            <record>
+                <playerX>Mr.bibi</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 20:57:33</timestamp>
+            </record>
+            <record>
+                <playerX>Mpagasas</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:42:51</timestamp>
+            </record>
+            <record>
+                <playerX>Mpagasas</playerX>
+                <playerO>33</playerO>
+                <result>O</result>
+                <scoreX>75.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:43:04</timestamp>
+            </record>
+            <record>
+                <playerX>Mpagasas</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>60.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 21:43:15</timestamp>
+            </record>
+            <record>
+                <playerX>giagia</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>20.0</scoreO>
+                <timestamp>17-05-2022 21:48:23</timestamp>
+            </record>
+            <record>
+                <playerX>giagia</playerX>
+                <playerO>33</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>16.0</scoreO>
+                <timestamp>17-05-2022 21:48:46</timestamp>
+            </record>
+            <record>
+                <playerX>kados</playerX>
+                <playerO>33</playerO>
+                <result>O</result>
+                <scoreX>33.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 21:49:04</timestamp>
+            </record>
+            <record>
+                <playerX>kurwa</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>37.0</scoreO>
+                <timestamp>17-05-2022 21:49:46</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>33.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 22:07:59</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>40.0</scoreX>
+                <scoreO>33.0</scoreO>
+                <timestamp>17-05-2022 22:10:01</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>45.0</scoreX>
+                <scoreO>28.0</scoreO>
+                <timestamp>17-05-2022 22:11:36</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>71.0</scoreO>
+                <timestamp>17-05-2022 22:21:03</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>33</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>46.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 22:21:22</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>X</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 22:22:28</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
+                <playerO>xXx_PAOKARA_xXx</playerO>
+                <result>T</result>
+                <scoreX>53.0</scoreX>
+                <scoreO>22.0</scoreO>
+                <timestamp>17-05-2022 22:22:57</timestamp>
+            </record>
+        </records>
+    </player>
+    <player>
+        <name>OFI MONO RE M**NIA</name>
+        <games>13</games>
+        <wins>7</wins>
+        <loses>6</loses>
+        <score>53.0</score>
+        <records>
+            <record>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:54:41</timestamp>
+            </record>
+            <record>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:45</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:58</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>66.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 21:58:14</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>80.0</scoreO>
+                <timestamp>17-05-2022 21:58:20</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>60.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:58:27</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>OFI MONO RE M**NIA</playerX>
+                <playerO>kados</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>40.0</scoreO>
+                <timestamp>17-05-2022 21:58:44</timestamp>
+            </record>
+            <record>
+                <playerX>OFI MONO RE M**NIA</playerX>
+                <playerO>kados</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>42.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:58:49</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:59:59</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>66.0</scoreX>
+                <scoreO>44.0</scoreO>
+                <timestamp>17-05-2022 22:00:05</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>xXx_PAOKARA_xXx</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 22:00:11</timestamp>
+            </record>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
+                <result>O</result>
+                <scoreX>25.0</scoreX>
+                <scoreO>54.0</scoreO>
+                <timestamp>17-05-2022 22:00:23</timestamp>
+            </record>
+            <record>
+                <playerX>Roz Natal</playerX>
+                <playerO>OFI MONO RE M**NIA</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>16.0</scoreX>
+                <scoreO>58.0</scoreO>
+                <timestamp>17-05-2022 22:00:34</timestamp>
             </record>
+        </records>
+    </player>
+    <player>
+        <name>Mpagasas</name>
+        <games>7</games>
+        <wins>3</wins>
+        <loses>2</loses>
+        <score>57.0</score>
+        <records>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerO>kados</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:40:19</timestamp>
             </record>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <playerO>kados</playerO>
+                <result>T</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:40:26</timestamp>
             </record>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerO>kados</playerO>
+                <result>T</result>
+                <scoreX>75.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 21:41:00</timestamp>
+            </record>
+            <record>
+                <playerX>Mpagasas</playerX>
+                <playerO>33</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>66.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:42:51</timestamp>
             </record>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerO>33</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>75.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:43:04</timestamp>
             </record>
             <record>
                 <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerO>33</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>60.0</scoreX>
+                <scoreO>25.0</scoreO>
+                <timestamp>17-05-2022 21:43:15</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>giagia</playerX>
+                <playerO>Mpagasas</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:47:30</timestamp>
             </record>
+        </records>
+    </player>
+    <player>
+        <name>kurwa</name>
+        <games>5</games>
+        <wins>3</wins>
+        <loses>2</loses>
+        <score>60.0</score>
+        <records>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>kurwa</playerX>
+                <playerO>33</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>37.0</scoreO>
+                <timestamp>17-05-2022 21:49:46</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>kurwa</playerX>
+                <playerO>Tony Start</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 21:56:57</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>kurwa</playerX>
+                <playerO>Tony Start</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:57:05</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>kurwa</playerX>
+                <playerO>Mpompiras</playerO>
+                <result>O</result>
+                <scoreX>66.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:57:19</timestamp>
+            </record>
+            <record>
+                <playerX>kurwa</playerX>
+                <playerO>Mpompiras</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:24</timestamp>
             </record>
+        </records>
+    </player>
+    <player>
+        <name>Tony Start</name>
+        <games>4</games>
+        <wins>2</wins>
+        <loses>1</loses>
+        <score>62.0</score>
+        <records>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>Roz Natal</playerX>
+                <playerO>Tony Start</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 21:56:27</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>Roz Natal</playerX>
+                <playerO>Tony Start</playerO>
+                <result>T</result>
+                <scoreX>0.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:56:40</timestamp>
+            </record>
+            <record>
+                <playerX>kurwa</playerX>
+                <playerO>Tony Start</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 21:56:57</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>kurwa</playerX>
+                <playerO>Tony Start</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>50.0</scoreO>
+                <timestamp>17-05-2022 21:57:05</timestamp>
             </record>
         </records>
     </player>
     <player>
         <name>Mr.bibi</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
+        <games>9</games>
+        <wins>6</wins>
+        <loses>3</loses>
+        <score>66.0</score>
         <records>
             <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
+                <playerX>Mr.bibi</playerX>
+                <playerO>arrwstos33</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>0.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 20:56:36</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>Mr.bibi</playerX>
+                <playerO>33</playerO>
+                <result>X</result>
+                <scoreX>100.0</scoreX>
+                <scoreO>0.0</scoreO>
+                <timestamp>17-05-2022 20:57:33</timestamp>
+            </record>
+            <record>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>100.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:45</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>100.0</scoreO>
+                <timestamp>17-05-2022 21:57:58</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
+                <scoreX>66.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 21:58:14</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>50.0</scoreX>
+                <scoreO>80.0</scoreO>
+                <timestamp>17-05-2022 21:58:20</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>OFI MONO RE M**NIA</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>60.0</scoreX>
+                <scoreO>66.0</scoreO>
+                <timestamp>17-05-2022 21:58:27</timestamp>
             </record>
             <record>
-                <playerX>Mpagasas</playerX>
+                <playerX>33</playerX>
+                <playerO>Mr.bibi</playerO>
+                <result>O</result>
+                <scoreX>50.0</scoreX>
+                <scoreO>71.0</scoreO>
+                <timestamp>17-05-2022 22:21:03</timestamp>
+            </record>
+            <record>
+                <playerX>33</playerX>
                 <playerO>Mr.bibi</playerO>
                 <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
+                <scoreX>46.0</scoreX>
+                <scoreO>75.0</scoreO>
+                <timestamp>17-05-2022 22:21:22</timestamp>
             </record>
         </records>
-    </player>
-    <player>
-        <name>Vaggelis</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
-        <records>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-        </records>
-    </player>
-    <player>
-        <name>Tirkouaz neraida</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
-        <records>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-        </records>
-    </player>
-    <player>
-        <name>xmxmx</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
-        <records>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:23:59</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>X</result>
-                <scoreX>89.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-            <record>
-                <playerX>Mpagasas</playerX>
-                <playerO>Mr.bibi</playerO>
-                <result>O</result>
-                <scoreX>49.0</scoreX>
-                <scoreO>73.0</scoreO>
-                <timestamp>16-05-2022 17:22:56</timestamp>
-            </record>
-        </records>
-    </player>
-    <player>
-        <name>giia deikse</name>
-        <games>0</games>
-        <wins>0</wins>
-        <loses>0</loses>
-        <score>0</score>
-        <records/>
     </player>
 </playerRoster>

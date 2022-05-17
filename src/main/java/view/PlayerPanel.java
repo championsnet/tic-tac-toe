@@ -87,23 +87,23 @@ public class PlayerPanel extends javax.swing.JPanel {
 		// Xrisimopoioume html giati einai o pio eukolos tropos na kounisoume se
 		// left alignment ta stoixeia xwris na xalasei to BoxLayout pou einai xazo
 		// ama apla orisw LEFT_ALIGNMENT to BoxLayout ta vazei sto kentro (dunno why)
-		totalLbl = new JLabel("<html>Total: -</html>");
+		totalLbl = new JLabel("<html>Total: <b>-</b></html>");
 		totalLbl.setAlignmentX(CENTER_ALIGNMENT);
 		totalLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 14));
 		
-		wonLbl = new JLabel("<html>Won: -%</html>");
+		wonLbl = new JLabel("<html>Won: <b>-%</b></html>");
 		wonLbl.setAlignmentX(CENTER_ALIGNMENT);
 		wonLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 14));
 		
-		lostLbl = new JLabel("<html>Lost: -%</html>");
+		lostLbl = new JLabel("<html>Lost: <b>-%</b></html>");
 		lostLbl.setAlignmentX(CENTER_ALIGNMENT);
 		lostLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 14));
 		
-		totalScoreLbl = new JLabel("<html>Total score: -</html>");
+		totalScoreLbl = new JLabel("<html>Total score: <b>-</b></html>");
 		totalScoreLbl.setAlignmentX(CENTER_ALIGNMENT);
 		totalScoreLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 14));
 		
-		recentScoreLbl = new JLabel("<html>Recent score: -</html>");
+		recentScoreLbl = new JLabel("<html>Latest result: <b>-</b></html>");
 		recentScoreLbl.setAlignmentX(CENTER_ALIGNMENT);
 		recentScoreLbl.setFont(new Font(FONT_NAME, Font.PLAIN, 14));
 		
@@ -147,16 +147,16 @@ public class PlayerPanel extends javax.swing.JPanel {
 	
 	public void updateLabels(Player player) {
 		playerNameLbl.setText(player.getName());
-		totalLbl.setText("<html>Total: " + player.getGames() + "</html>");
-		wonLbl.setText("<html>Won: " + player.getWins() + "</html>");
-		lostLbl.setText("<html>Lost: " + player.getLoses() + "</html>");
-		totalScoreLbl.setText("<html>Total Score: " + player.getScore() + "</html>");
-		recentScoreLbl.setText("<html>Latest Score: " + player.getRecentScore() + "</html>");
-		
-		String[] best = player.getBestGamesString(5);
-		String finalBest = "<html><u>Best Games:</u><br>";
-		for (int i = 0; i<5; i++) finalBest += best[i] + "<br>";
-		bestLbl.setText(finalBest);
+		totalLbl.setText("<html>Total: <b>" + player.getGames() + "</b></html>");
+		wonLbl.setText("<html>Won: <b>" + player.getWins() + "</b></html>");
+		lostLbl.setText("<html>Lost: <b>" + player.getLoses() + "</b></html>");
+		totalScoreLbl.setText("<html>Total score: <b>" + player.getScore() + "</b></html>");
+		recentScoreLbl.setText("<html>Latest result: <b>" + player.getRecentScore() + "</b></html>");
+//		
+//		String[] best = player.getBestGamesString(5);
+//		String finalBest = "<html><u>Best Games:</u><br>";
+//		for (int i = 0; i<5; i++) finalBest += best[i] + "<br>";
+//		bestLbl.setText(finalBest);
 	}
 	
 	public void setTotal(String text) {

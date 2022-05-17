@@ -42,6 +42,8 @@ public class Controller {
 		this.addPlayerBtn = view.getBannerPanel().getAddPlayerButton();
 		this.selectPlayerXBtn = view.getxPanel().getSelectPlayerButton();
 		this.selectPlayerOBtn = view.getoPanel().getSelectPlayerButton();
+		
+		view.getHofPanel().setHof(roster.getHallOfFame());
 	}
 	
 	public JTable getTable() {
@@ -94,22 +96,41 @@ public class Controller {
 						// Increase filled positions
 						board.setFilledPos(board.getFilledPos() + 1);
 						
+						// Update who plays on message label
+						if (board.getCurrentPlayer() == 'o') view.getBoardPanel().setMessage("<<<   X");
+						else view.getBoardPanel().setMessage("O   >>>");
 						
 						// Fill gui table
 						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
 						// Check if someone won or if all positions are filled
 						if (logic.isFinished(board)){
+							doneBtn.setEnabled(true);
 							consoleMessage("Game finished");
+							char result = 'T';
 							if (board.getState() == 'x' || board.getState() == 'o') {
 								consoleMessage("Player " + board.getState() + " won!");
+								
 								logic.setStartO();
 								logic.setStartX();
+								
+								// Kefalaia exoume ti simvasi gia save kai load
+								result = Character.toUpperCase(board.getState());
+								
+								view.getBoardPanel().setMessage("Player " + result + " won!");
 							}
 							else if (board.getState() == 'T') {
 								consoleMessage("It is a tie...");
+								view.getBoardPanel().setMessage("It is a tie! (-_-)");
 								logic.setStartO();
 								logic.setStartX();
+								result = board.getState();
 							}
+							roster.createRecords(result);
+							
+							// Update player panels with new data and also hall of fame
+							view.getxPanel().updateLabels(roster.getSelectedPlayerX());
+							view.getoPanel().updateLabels(roster.getSelectedPlayerO());
+							view.getHofPanel().setHof(roster.getHallOfFame());
 						}
 						// Change player
 						board.setCurrentPlayer();
@@ -156,6 +177,7 @@ public class Controller {
 		
 		doneBtn.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
+				if (!doneBtn.isEnabled()) return;
 				if (logic.isFinished(board)) {
 					view.getBoardPanel().resetBoard();
 					view.visibleBoardPanel(false);
@@ -165,6 +187,8 @@ public class Controller {
 					ready_o.setEnabled(true);
 					selectPlayerXBtn.setEnabled(true);
 					selectPlayerOBtn.setEnabled(true);
+					doneBtn.setEnabled(false);
+					view.getBoardPanel().setMessage("<<<   X");
 				}
 			}
 		});

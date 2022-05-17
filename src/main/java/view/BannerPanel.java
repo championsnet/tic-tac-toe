@@ -36,6 +36,8 @@ public class BannerPanel extends javax.swing.JPanel {
 		doneButton = new JButton("DONE");
 		doneButton.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		doneButton.setAlignmentY(CENTER_ALIGNMENT);
+		// At start done button must be disabled
+		doneButton.setEnabled(false);
 		
 		add(quitButton);
 		add(addPlayerButton);
