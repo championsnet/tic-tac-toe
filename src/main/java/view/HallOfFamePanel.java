@@ -83,7 +83,7 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 	
 	}
 	
-	public void setPlayer(int position, String player, int score) {
+	public void setPlayer(int position, String player, float score) {
 		model.setValueAt(player, position, 1);
 		model.setValueAt(score, position, 2);
 	}
@@ -93,7 +93,11 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 	}
 	
 	public void setHof(Player[] list) {
-		
+		int i = 0;
+		for (Player player : list) {
+			setPlayer(i, player.getName(), player.getScore());
+			i++;
+		}
 	}
 
 }
