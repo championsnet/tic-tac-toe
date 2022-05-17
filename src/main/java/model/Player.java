@@ -101,8 +101,35 @@ public class Player {
 	    }
 		Arrays.sort(relativeScores, Comparator.comparingDouble(o -> o[0]));
 		for (i = 0; i < games; i++) bestGames.add(gameRecords.get(relativeScores[games-i-1][1]));
-		
+		System.out.println();
 		return bestGames;
+	}
+	
+	// Get best games as string in form 'W vs xyz'
+	public String[] getBestGamesString(int games) {
+		ArrayList<GameRecord> bestGames = getBestGames(games);
+		String[] best = new String[games];
+		for (int i = 0; i < bestGames.size(); i ++) {
+			char result = bestGames.get(i).getResult();
+			
+			// Determine what side was the player playing
+			if (this.name == bestGames.get(i).getPlayerX()) {
+				if (result == 'X') result = 'W';
+				else if (result == 'O') result = 'L';
+				// If 'T' then no need to change anything
+				best[i] = result + " vs " + bestGames.get(i).getPlayerO();
+			}
+			else {
+				if (result == 'X') result = 'L';
+				else if (result == 'O') result = 'W';
+				// If 'T' then no need to change anything
+				best[i] = result + " vs " + bestGames.get(i).getPlayerX();
+			}			
+		}
+		// If there are not enough games, then the rest positions are returned as '-'
+		for (int i = 5; i > bestGames.size(); i--) best[i] = "-";
+		
+		return best;
 	}
 	
 	public void setGames(int games) {

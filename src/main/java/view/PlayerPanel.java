@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
@@ -14,6 +15,9 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+
+import main.java.model.GameRecord;
+import main.java.model.Player;
 
 //Suppress to enoxlitiko warning gia serialization
 @SuppressWarnings("serial")
@@ -51,6 +55,9 @@ public class PlayerPanel extends javax.swing.JPanel {
 		startButton = new JButton("READY");
 		startButton.setMaximumSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		startButton.setAlignmentX(CENTER_ALIGNMENT);
+		
+		// At the beginning the button is disabled until a player is selected
+		startButton.setEnabled(false);
 		
 		// Initialize select player button
 		selectPlayerButton = new JButton("SELECT PLAYER");
@@ -138,8 +145,18 @@ public class PlayerPanel extends javax.swing.JPanel {
 		return selectPlayerButton;
 	}
 	
-	public void setPlayerName(String text) {
-		playerNameLbl.setText(text);
+	public void updateLabels(Player player) {
+		playerNameLbl.setText(player.getName());
+		totalLbl.setText("<html>Total: " + player.getGames() + "</html>");
+		wonLbl.setText("<html>Won: " + player.getWins() + "</html>");
+		lostLbl.setText("<html>Lost: " + player.getLoses() + "</html>");
+		totalScoreLbl.setText("<html>Total Score: " + player.getScore() + "</html>");
+		recentScoreLbl.setText("<html>Latest Score: " + player.getRecentScore() + "</html>");
+		
+		String[] best = player.getBestGamesString(5);
+		String finalBest = "<html><u>Best Games:</u><br>";
+		for (int i = 0; i<5; i++) finalBest += best[i] + "<br>";
+		bestLbl.setText(finalBest);
 	}
 	
 	public void setTotal(String text) {

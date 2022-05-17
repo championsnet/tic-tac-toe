@@ -2,6 +2,8 @@ package main.java.controller;
 
 import main.java.model.Board;
 import main.java.model.GameLogic;
+import main.java.model.Player;
+import main.java.model.PlayerRoster;
 import main.java.view.MainWindow;
 
 import java.awt.event.MouseAdapter;
@@ -13,6 +15,7 @@ import javax.swing.JTable;
 
 public class Controller {
 	
+	private PlayerRoster roster;
 	private GameLogic logic;
 	private MainWindow view;
 	private Board board;
@@ -21,9 +24,13 @@ public class Controller {
 	private JButton ready_o;
 	private JButton doneBtn;
 	private JButton quit;
+	private JButton addPlayerBtn;
+	private JButton selectPlayerXBtn;
+	private JButton selectPlayerOBtn;
 	
 	
-	public Controller(GameLogic l, MainWindow v, Board b) {
+	public Controller(PlayerRoster r, GameLogic l, MainWindow v, Board b) {
+		this.roster = r;
 		this.board = b;
 		this.logic = l;
 		this.view = v;
@@ -32,6 +39,9 @@ public class Controller {
 		this.ready_o = view.getoPanel().getStartButton();
 		this.doneBtn = view.getBannerPanel().getDoneButton();
 		this.quit = view.getBannerPanel().getQuitButton();
+		this.addPlayerBtn = view.getBannerPanel().getAddPlayerButton();
+		this.selectPlayerXBtn = view.getxPanel().getSelectPlayerButton();
+		this.selectPlayerOBtn = view.getoPanel().getSelectPlayerButton();
 	}
 	
 	public JTable getTable() {
@@ -83,8 +93,8 @@ public class Controller {
 						logic.move(row, col, board);
 						// Increase filled positions
 						board.setFilledPos(board.getFilledPos() + 1);
-						// Change player
-						board.setCurrentPlayer();
+						
+						
 						// Fill gui table
 						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
 						// Check if someone won or if all positions are filled
@@ -101,6 +111,8 @@ public class Controller {
 								logic.setStartX();
 							}
 						}
+						// Change player
+						board.setCurrentPlayer();
 						Board newBoard = new Board(board.getFilledPos() + 1, board.getState(), board.getCurrentPlayer());
 						boards.add(newBoard);
 					}
@@ -111,22 +123,32 @@ public class Controller {
 		
 		ready_x.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
+				if (!ready_x.isEnabled()) return;
 				consoleMessage("Player x ready...");
 				logic.setStartX();
 				if (logic.isStarting()){
-					view.getBoardPanel().setVisible(true);
-					view.getHofPanel().setVisible(false);
+					view.visibleBoardPanel(true);
+					view.visibleHofPanel(false);
+					ready_x.setEnabled(false);
+					ready_o.setEnabled(false);
+					selectPlayerXBtn.setEnabled(false);
+					selectPlayerOBtn.setEnabled(false);
 				}
 			}
 		});
 		
 		ready_o.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
+				if (!ready_o.isEnabled()) return;
 				consoleMessage("Player o ready...");
 				logic.setStartO();
 				if (logic.isStarting()){
-					view.getBoardPanel().setVisible(true);
-					view.getHofPanel().setVisible(false);
+					view.visibleBoardPanel(true);
+					view.visibleHofPanel(false);
+					ready_x.setEnabled(false);
+					ready_o.setEnabled(false);
+					selectPlayerXBtn.setEnabled(false);
+					selectPlayerOBtn.setEnabled(false);
 				}
 			}
 		});
@@ -136,9 +158,13 @@ public class Controller {
 			public void mousePressed(MouseEvent e) {
 				if (logic.isFinished(board)) {
 					view.getBoardPanel().resetBoard();
-					view.getBoardPanel().setVisible(false);
-					view.getHofPanel().setVisible(true);
+					view.visibleBoardPanel(false);
+					view.visibleHofPanel(true);
 					logic.setDone();
+					ready_x.setEnabled(true);
+					ready_o.setEnabled(true);
+					selectPlayerXBtn.setEnabled(true);
+					selectPlayerOBtn.setEnabled(true);
 				}
 			}
 		});
@@ -146,6 +172,48 @@ public class Controller {
 		quit.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				System.exit(0);
+			}
+		});
+		
+		addPlayerBtn.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				String newPlayer = view.addPlayerDialog();
+				if (newPlayer != null) {
+					view.messageDialog(roster.addPlayer(newPlayer));
+				}
+			}
+		});
+		
+		selectPlayerXBtn.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				if (!selectPlayerXBtn.isEnabled()) return;
+				String selection = view.selectPlayerDialog(roster.getAllPlayersString(), 'X');
+				if (selection == null) return;
+				Player selected = roster.getPlayer(selection);
+				String result = roster.setSelectedPlayerX(selected);
+				if (result != null) view.messageDialog(result);
+				else {
+					view.getxPanel().updateLabels(selected);
+					ready_x.setEnabled(true);
+				}
+				// TODO Do sth with the selected player
+			}
+		});
+		
+		selectPlayerOBtn.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				if (!selectPlayerOBtn.isEnabled()) return;
+				String selection = view.selectPlayerDialog(roster.getAllPlayersString(), 'O');
+				if (selection == null) return;
+				Player selected = roster.getPlayer(selection);
+				String result = roster.setSelectedPlayerO(selected);
+				if (result != null) view.messageDialog(result);
+				else {
+					view.getoPanel().updateLabels(selected);
+					ready_o.setEnabled(true);
+				}
+				//view.getoPanel().setPlayerName(selection);
+				// TODO Do sth with the selected player
 			}
 		});
 	}

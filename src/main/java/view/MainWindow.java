@@ -96,6 +96,16 @@ public class MainWindow extends JFrame {
 		return hofPanel;
 	}
 	
+	public void visibleBoardPanel(boolean state) {
+		boardPanel.setVisible(state);
+		if (state) mainPanel.setBackground(boardPanel.getBackground());
+	}
+	
+	public void visibleHofPanel(boolean state) {
+		hofPanel.setVisible(state);
+		if (state) mainPanel.setBackground(hofPanel.getBackground());
+	}
+	
 	public void switchMainPanel() {
 		boardPanel.setVisible(!boardPanel.isVisible());
 		hofPanel.setVisible(!hofPanel.isVisible());
@@ -126,7 +136,12 @@ public class MainWindow extends JFrame {
                 null,
                 null,
                 null);
-		
 		return newPlayer;
+	}
+	
+	public void messageDialog(String message) {
+		JOptionPane.showMessageDialog(
+                this,
+                message);
 	}
 }

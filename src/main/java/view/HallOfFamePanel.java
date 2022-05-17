@@ -11,6 +11,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
+import main.java.model.Player;
+
 //Suppress to enoxlitiko warning gia serialization
 @SuppressWarnings("serial")
 public class HallOfFamePanel extends javax.swing.JPanel {
@@ -88,6 +90,10 @@ public class HallOfFamePanel extends javax.swing.JPanel {
 	
 	public void setHofVisible(boolean state) {
 		setVisible(state);
+	}
+	
+	public void setHof(Player[] list) {
+		
 	}
 
 }

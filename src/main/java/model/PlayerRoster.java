@@ -24,6 +24,8 @@ import org.w3c.dom.NodeList;
 public class PlayerRoster implements PlayerRosterDao{
 	
 	ArrayList<Player> players;
+	Player selectedPlayerX;
+	Player selectedPlayerO;
 
 	public PlayerRoster(){
 		players = new ArrayList<Player>();
@@ -65,7 +67,6 @@ public class PlayerRoster implements PlayerRosterDao{
 							
 							GameRecord record = new GameRecord(playerX, playerO, result, scoreX, scoreO, timestamp);
 							records.add(record);
-							System.out.println(playerX+":"+ playerO+":"+ result);
 						}
 					}
 					Player player = new Player(name, games, wins, loses, records);
@@ -205,7 +206,19 @@ public class PlayerRoster implements PlayerRosterDao{
 	//retrieve list of players from the database
 	@Override
 	public ArrayList<Player> getAllPlayers() {
-	   return players;
+		return players;
+	}
+	
+	//retrieve list of players from the database in strings
+	@Override
+	public String[] getAllPlayersString() {
+		String[] players = new String[this.players.size()];
+		int i = 0;
+		for (Player player : this.players) {
+			players[i] = player.getName();
+			i++;
+		}
+		return players;
 	}
 
 	@Override
@@ -220,20 +233,31 @@ public class PlayerRoster implements PlayerRosterDao{
 
 	@Override
 	// ginetai elegxos prwta an uparxei to onoma
-	public boolean addPlayer(String name) {
+	public String addPlayer(String name) {
+		if (name.isEmpty()) {
+			System.out.println("Name can't be empty");
+			return "Name can't be empty";
+		}
+		if (name.startsWith(" ")) {
+			System.out.println("Name can't start with space");
+			return "Name can't start with space";
+		}
 		// Mexri 20 characters epitrepoume sto onoma
 		if (name.length() > 20) {
-			System.out.println("Too many character (>20)!");
-			return false;
+			System.out.println("Too many characters (>20)!");
+			return "Too many characters (>20)!";
 		}
 		if (getPlayer(name) != null) {
 			System.out.println("Player with name: " + name + " already exists");
-			return false;
+			return "Player with name: " + name + " already exists";
 		}
 		Player player = new Player(name);
 		players.add(player);
+		// After player is succesfully added, save roster to file
+		this.savePlayerRoster();
+		
 		System.out.println("Player: " + player.getName() + ", added in the database");
-		return true;
+		return "Player: " + player.getName() + " succesfully created!";
 	}
 	
 	@Override 
@@ -252,6 +276,36 @@ public class PlayerRoster implements PlayerRosterDao{
 			System.out.println((i+1) + ". " + hof[i].getScore());
 		}
 		return hof;
+	}
+	
+	@Override
+	public Player getSelectedPlayerX() {
+		return selectedPlayerX;
+	}
+	
+	@Override
+	public Player getSelectedPlayerO() {
+		return selectedPlayerO;
+	}
+	
+	public String setSelectedPlayerX(Player selection) {
+		if (selectedPlayerO == null || !selection.getName().equals(selectedPlayerO.getName())) {
+			selectedPlayerX = selection;
+			return null;
+		}	
+		else {
+			return selection.getName() + " already selected in the opposite side!";
+		}
+	}
+	
+	public String setSelectedPlayerO(Player selection) {
+		if (selectedPlayerX == null || !selection.getName().equals(selectedPlayerX.getName())) {
+			selectedPlayerO = selection;
+			return null;
+		}	
+		else {
+			return selection.getName() + " already selected in the opposite side!";
+		}
 	}
 
 }
