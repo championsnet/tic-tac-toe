@@ -75,7 +75,44 @@ public class PlayerRoster implements PlayerRosterDao{
 					
 					players.add(player);
 				}  
-			}   
+			}
+			
+			
+			nodeList = doc.getElementsByTagName("ai");
+			// Manually load data from xml to appropriate structures cuz Java sucks
+			for (int itr = 0; itr < nodeList.getLength(); itr++) {  
+				Node node = nodeList.item(itr);   
+				if (node.getNodeType() == Node.ELEMENT_NODE) {  
+					Element e = (Element) node;  
+					String name = e.getElementsByTagName("name").item(0).getTextContent();
+					String mode = e.getElementsByTagName("mode").item(0).getTextContent();
+					int games = Integer.parseInt(e.getElementsByTagName("games").item(0).getTextContent());
+					int wins = Integer.parseInt(e.getElementsByTagName("wins").item(0).getTextContent());
+					int loses = Integer.parseInt(e.getElementsByTagName("loses").item(0).getTextContent());
+					ArrayList<GameRecord> records = new ArrayList<GameRecord>();
+					
+					NodeList nodeListRecs = e.getElementsByTagName("record");
+					for (int jtr = 0; jtr < nodeListRecs.getLength(); jtr++) {
+						Node nodeRec = nodeListRecs.item(jtr);  
+						if (nodeRec.getNodeType() == Node.ELEMENT_NODE) {  
+							Element er = (Element) nodeRec; 
+							String playerX = er.getElementsByTagName("playerX").item(0).getTextContent();
+							String playerO = er.getElementsByTagName("playerO").item(0).getTextContent();
+							char result = er.getElementsByTagName("result").item(0).getTextContent().charAt(0);
+							float scoreX = Float.parseFloat(er.getElementsByTagName("scoreX").item(0).getTextContent());
+							float scoreO = Float.parseFloat(er.getElementsByTagName("scoreO").item(0).getTextContent());
+							String timestamp = er.getElementsByTagName("timestamp").item(0).getTextContent();
+							
+							GameRecord record = new GameRecord(playerX, playerO, result, scoreX, scoreO, timestamp);
+							records.add(record);
+						}
+					}
+					AI player = new AI(name, mode, games, wins, loses, records);
+					
+					players.add(player);
+				}  
+			}
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -96,13 +133,22 @@ public class PlayerRoster implements PlayerRosterDao{
 	        doc.appendChild(root);
 	        
 	        for (Player pl : players) {
-	        	Element player = doc.createElement("player");
+	        	Element player;
+	        	if (pl.getMode() == null) player = doc.createElement("player");
+	        	else player = doc.createElement("ai");
 		        root.appendChild(player);
 
 	            Element name = doc.createElement("name");
 	            name.appendChild(doc.createTextNode(String.valueOf(pl
 	                    .getName())));
 	            player.appendChild(name);
+	            
+	            if (pl.getMode() != null) {
+	            	Element mode = doc.createElement("mode");
+		            mode.appendChild(doc.createTextNode(String.valueOf(pl
+		                    .getMode())));
+		            player.appendChild(mode);
+	            }
 
 	            Element games = doc.createElement("games");
 	            games.appendChild(doc.createTextNode(String.valueOf(pl

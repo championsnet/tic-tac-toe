@@ -7,6 +7,9 @@ import java.util.Comparator;
 public class Player {
 
 	private String name;
+	
+	// AI mplimpikia
+	private String mode;
 	private int games;
 	private int wins;
 	private int loses;
@@ -28,6 +31,7 @@ public class Player {
 	public Player(String name, int games, int wins, int loses, ArrayList<GameRecord> gameRecords) {
 		super();
 		this.name = name;
+		this.mode = null;
 		this.games = games;
 		this.wins = wins;
 		this.loses = loses;
@@ -39,6 +43,11 @@ public class Player {
 
 	public String getName() {
 		return name;
+	}
+	
+	
+	public String getMode() {
+		return mode;
 	}
 
 	
@@ -112,20 +121,21 @@ public class Player {
 			i++;
 	    }
 		Arrays.sort(relativeScores, Comparator.comparingDouble(o -> o[0]));
-		for (i = 0; i < gameRecords.size(); i++) bestGames.add(gameRecords.get(relativeScores[gameRecords.size()-i-1][1]));
+		for (i = 0; i < Integer.min(games, gameRecords.size()); i++) {
+			bestGames.add(gameRecords.get(relativeScores[gameRecords.size()-i-1][1]));
+		}
 		
 		return bestGames;
 	}
 	
 	// Get best games as string in form 'W vs xyz'
 	public String[] getBestGamesString(int games) {
-		ArrayList<GameRecord> bestGames = getRecentGames(games);
+		ArrayList<GameRecord> bestGames = getBestGames(games);
 		String[] best = new String[games];
 		for (int i = 0; i < bestGames.size(); i ++) {
 			char result = bestGames.get(i).getResult();
-			
 			// Determine what side was the player playing
-			if (this.name == bestGames.get(i).getPlayerX()) {
+			if (this.name.equals(bestGames.get(i).getPlayerX())) {
 				if (result == 'X') result = 'W';
 				else if (result == 'O') result = 'L';
 				// If 'T' then no need to change anything
@@ -139,7 +149,7 @@ public class Player {
 			}			
 		}
 		// If there are not enough games, then the rest positions are returned as '-'
-		for (int i = 0; i < bestGames.size(); i++) best[games - bestGames.size() + i] = "-";
+		for (int i = bestGames.size(); i < games; i++) best[i] = "-";
 		
 		return best;
 	}

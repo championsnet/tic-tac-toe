@@ -87,7 +87,7 @@ public class GameRecord {
 	}
 
 	public int getRelativeScore(String name) {
-		if (name == playerX) return relativeScoreX;
+		if (name.equals(playerX)) return relativeScoreX;
 		else return relativeScoreO;
 	}
 	

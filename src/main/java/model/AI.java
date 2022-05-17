@@ -1,5 +1,6 @@
 package main.java.model;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class AI extends Player{
@@ -11,6 +12,11 @@ public class AI extends Player{
 		this.mode = mode;
 	}
 	
+	public AI(String name, String mode, int games, int wins, int loses, ArrayList<GameRecord> gameRecords) {
+		super(name, games, wins, loses, gameRecords);
+		this.mode = mode;
+	}
+	
 	public String getMode() {
 		return this.mode;
 	}
@@ -19,10 +25,12 @@ public class AI extends Player{
 		int x = -1;
 		int y = -1;
 		int bestScore = -100;
-		Random rand = null;
+		Random rand = new Random();
 		if (this.mode == "random") {
-			x = rand.nextInt(3);
-			y = rand.nextInt(3);
+			do {
+				x = rand.nextInt(3);
+				y = rand.nextInt(3);
+			} while(logic.isEmpty(x, y));
 			int[] arr = {x,y};
 			return arr;
 		}

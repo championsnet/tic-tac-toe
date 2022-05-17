@@ -146,17 +146,20 @@ public class PlayerPanel extends javax.swing.JPanel {
 	}
 	
 	public void updateLabels(Player player) {
+		
 		playerNameLbl.setText(player.getName());
+		int games = player.getGames();
 		totalLbl.setText("<html>Total: <b>" + player.getGames() + "</b></html>");
-		wonLbl.setText("<html>Won: <b>" + player.getWins() + "</b></html>");
-		lostLbl.setText("<html>Lost: <b>" + player.getLoses() + "</b></html>");
+		if (games == 0) games = 1; // Do evade division by 0 
+		wonLbl.setText("<html>Won: <b>" + String.format("%.1f", (float)player.getWins()/(float)games * 100.0) + "%</b></html>");
+		lostLbl.setText("<html>Lost: <b>" + String.format("%.1f", (float)player.getLoses()/(float)games * 100.0) + "%</b></html>");
 		totalScoreLbl.setText("<html>Total score: <b>" + player.getScore() + "</b></html>");
 		recentScoreLbl.setText("<html>Latest result: <b>" + player.getRecentScore() + "</b></html>");
-//		
-//		String[] best = player.getBestGamesString(5);
-//		String finalBest = "<html><u>Best Games:</u><br>";
-//		for (int i = 0; i<5; i++) finalBest += best[i] + "<br>";
-//		bestLbl.setText(finalBest);
+		
+		String[] best = player.getBestGamesString(5);
+		String finalBest = "<html><u>Best Games:</u><br>";
+		for (int i = 0; i<5; i++) finalBest += best[i] + "<br>";
+		bestLbl.setText(finalBest);
 	}
 	
 	public void setTotal(String text) {

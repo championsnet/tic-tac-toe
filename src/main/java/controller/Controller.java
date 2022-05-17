@@ -28,6 +28,12 @@ public class Controller {
 	private JButton selectPlayerXBtn;
 	private JButton selectPlayerOBtn;
 	
+//	if (roster.getSelectedPlayerX().getMode() != null ){
+//		AI ai = (AI) roster.getSelectedPlayerX();
+//		int[] arr = ai.move(board, logic);
+//		row = arr[0];
+//		col = arr[1];
+	
 	
 	public Controller(PlayerRoster r, GameLogic l, MainWindow v, Board b) {
 		this.roster = r;
@@ -204,6 +210,7 @@ public class Controller {
 				String newPlayer = view.addPlayerDialog();
 				if (newPlayer != null) {
 					view.messageDialog(roster.addPlayer(newPlayer));
+					view.getHofPanel().setHof(roster.getHallOfFame());
 				}
 			}
 		});
