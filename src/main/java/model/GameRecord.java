@@ -43,6 +43,8 @@ public class GameRecord {
 			this.relativeScoreX = 1000;
 			this.relativeScoreO = 100000;
 		}
+		
+		// Oso pio psilo to score antipalou toso pio kalo to relative score
 		this.relativeScoreX += scoreO;
 		this.relativeScoreO += scoreX;
 		

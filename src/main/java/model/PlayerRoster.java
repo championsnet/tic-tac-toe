@@ -77,7 +77,7 @@ public class PlayerRoster implements PlayerRosterDao{
 				}  
 			}
 			
-			
+			// If AI player exists in records, add them separately
 			nodeList = doc.getElementsByTagName("ai");
 			// Manually load data from xml to appropriate structures cuz Java sucks
 			for (int itr = 0; itr < nodeList.getLength(); itr++) {  
@@ -134,6 +134,7 @@ public class PlayerRoster implements PlayerRosterDao{
 	        
 	        for (Player pl : players) {
 	        	Element player;
+	        	// Ama to mode einai adeio tote einai kanonikos player alliws AI
 	        	if (pl.getMode() == null) player = doc.createElement("player");
 	        	else player = doc.createElement("ai");
 		        root.appendChild(player);
@@ -287,9 +288,9 @@ public class PlayerRoster implements PlayerRosterDao{
 			System.out.println("Name can't be empty");
 			return "Name can't be empty";
 		}
-		if (name.startsWith(" ")) {
-			System.out.println("Name can't start with space");
-			return "Name can't start with space";
+		if (name.startsWith(" ") || name.endsWith(" ")) {
+			System.out.println("Name can't start or end with space");
+			return "Name can't start or end with space";
 		}
 		// Mexri 20 characters epitrepoume sto onoma
 		if (name.length() > 20) {

@@ -65,7 +65,7 @@ public class GameLogic {
 			return true;
 		}
 		else {
-			System.out.println("The cell is occupied!");
+			//System.out.println("The cell is occupied!");
 			return false;
 		}
 	}
