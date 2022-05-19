@@ -1,5 +1,6 @@
 package main.java.controller;
 
+import main.java.model.AI;
 import main.java.model.Board;
 import main.java.model.GameLogic;
 import main.java.model.Player;
@@ -27,12 +28,8 @@ public class Controller {
 	private JButton addPlayerBtn;
 	private JButton selectPlayerXBtn;
 	private JButton selectPlayerOBtn;
-	
-//	if (roster.getSelectedPlayerX().getMode() != null ){
-//		AI ai = (AI) roster.getSelectedPlayerX();
-//		int[] arr = ai.move(board, logic);
-//		row = arr[0];
-//		col = arr[1];
+	private int row;
+	private int col;
 	
 	
 	public Controller(PlayerRoster r, GameLogic l, MainWindow v, Board b) {
@@ -76,6 +73,7 @@ public class Controller {
 		ArrayList<Board> boards = new ArrayList<Board>();
 		boards.add(board);
 		
+		
 		table.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				JTable target = (JTable)e.getSource();
@@ -99,6 +97,7 @@ public class Controller {
 					if (logic.isEmpty(row, col)){
 						// Fill array in logic
 						logic.move(row, col, board);
+						
 						// Increase filled positions
 						board.setFilledPos(board.getFilledPos() + 1);
 						
@@ -108,6 +107,7 @@ public class Controller {
 						
 						// Fill gui table
 						view.getBoardPanel().setCell(row, col, board.getCurrentPlayer());
+						
 						// Check if someone won or if all positions are filled
 						if (logic.isFinished(board)){
 							doneBtn.setEnabled(true);
@@ -139,14 +139,124 @@ public class Controller {
 							view.getHofPanel().setHof(roster.getHallOfFame());
 						}
 						// Change player
-						board.setCurrentPlayer();
+						if (!logic.isFinished(board)) {
+							board.setCurrentPlayer();
+						}
 						Board newBoard = new Board(board.getFilledPos() + 1, board.getState(), board.getCurrentPlayer());
 						boards.add(newBoard);
 					}
 				}
 				
 			}
-		});
+			public void mouseReleased(MouseEvent e) {
+			
+				int[] arr = new int[2];
+				if (roster.getSelectedPlayerO().getMode() != null && board.getCurrentPlayer() == 'o') {
+					arr = ((AI)roster.getSelectedPlayerO()).move(board, logic, view);
+					// Check if cell is empty when you press
+					if (logic.isEmpty(arr[0], arr[1])){
+						// Fill array in logic
+						logic.move(arr[0], arr[1], board);
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						// Update who plays on message label
+						if (board.getCurrentPlayer() == 'o') view.getBoardPanel().setMessage("<<<   X");
+						else view.getBoardPanel().setMessage("O   >>>");
+						// Fill gui table
+						view.getBoardPanel().setCell(arr[0], arr[1], board.getCurrentPlayer());
+						// Check if someone won or if all positions are filled
+						// Check if someone won or if all positions are filled
+						if (logic.isFinished(board)){
+							doneBtn.setEnabled(true);
+							consoleMessage("Game finished");
+							char result = 'T';
+							if (board.getState() == 'x' || board.getState() == 'o') {
+								consoleMessage("Player " + board.getState() + " won!");
+								
+								logic.setStartO();
+								logic.setStartX();
+								
+								// Kefalaia exoume ti simvasi gia save kai load
+								result = Character.toUpperCase(board.getState());
+								
+								view.getBoardPanel().setMessage("Player " + result + " won!");
+							}
+							else if (board.getState() == 'T') {
+								consoleMessage("It is a tie...");
+								view.getBoardPanel().setMessage("It is a tie! (-_-)");
+								logic.setStartO();
+								logic.setStartX();
+								result = board.getState();
+							}
+							roster.createRecords(result);
+							
+							// Update player panels with new data and also hall of fame
+							view.getxPanel().updateLabels(roster.getSelectedPlayerX());
+							view.getoPanel().updateLabels(roster.getSelectedPlayerO());
+							view.getHofPanel().setHof(roster.getHallOfFame());
+						}
+					}
+	
+						// Change player
+						board.setCurrentPlayer();
+						Board newBoard = new Board(board.getFilledPos() + 1, board.getState(), board.getCurrentPlayer());
+						boards.add(newBoard);
+				}
+				else if (roster.getSelectedPlayerX().getMode() != null && board.getCurrentPlayer() == 'x') {
+					arr = ((AI)roster.getSelectedPlayerX()).move(board, logic, view);
+					// Check if cell is empty when you press
+					if (logic.isEmpty(arr[0], arr[1])){
+						// Fill array in logic
+						logic.move(arr[0], arr[1], board);
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						// Update who plays on message label
+						if (board.getCurrentPlayer() == 'o') view.getBoardPanel().setMessage("<<<   X");
+						else view.getBoardPanel().setMessage("O   >>>");
+						// Fill gui table
+						view.getBoardPanel().setCell(arr[0], arr[1], board.getCurrentPlayer());
+						// Check if someone won or if all positions are filled
+						// Check if someone won or if all positions are filled
+						if (logic.isFinished(board)){
+							doneBtn.setEnabled(true);
+							consoleMessage("Game finished");
+							char result = 'T';
+							if (board.getState() == 'x' || board.getState() == 'o') {
+								consoleMessage("Player " + board.getState() + " won!");
+								
+								logic.setStartO();
+								logic.setStartX();
+								
+								// Kefalaia exoume ti simvasi gia save kai load
+								result = Character.toUpperCase(board.getState());
+								
+								view.getBoardPanel().setMessage("Player " + result + " won!");
+							}
+							else if (board.getState() == 'T') {
+								consoleMessage("It is a tie...");
+								view.getBoardPanel().setMessage("It is a tie! (-_-)");
+								logic.setStartO();
+								logic.setStartX();
+								result = board.getState();
+							}
+							roster.createRecords(result);
+							
+							// Update player panels with new data and also hall of fame
+							view.getxPanel().updateLabels(roster.getSelectedPlayerX());
+							view.getoPanel().updateLabels(roster.getSelectedPlayerO());
+							view.getHofPanel().setHof(roster.getHallOfFame());
+						}
+					}
+	
+						// Change player
+						board.setCurrentPlayer();
+						Board newBoard = new Board(board.getFilledPos() + 1, board.getState(), board.getCurrentPlayer());
+						boards.add(newBoard);
+				}
+			}
+		}
+				
+		);
 		
 		ready_x.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
@@ -160,6 +270,27 @@ public class Controller {
 					ready_o.setEnabled(false);
 					selectPlayerXBtn.setEnabled(false);
 					selectPlayerOBtn.setEnabled(false);
+				}
+				
+				if (logic.isDone()){
+					logic.resetTable();
+					board.setFilledPos(0);
+					board.setState('T');
+					logic.setDone();
+					if (board.getCurrentPlayer() == 'o') {
+						board.setCurrentPlayer();
+					}
+				}
+				
+				if (logic.isStarting()) {
+					if (roster.getSelectedPlayerX().getMode() != null && board.getFilledPos()==0){
+						logic.move(1, 1, board);
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						board.setCurrentPlayer();
+						// Fill gui table
+						view.getBoardPanel().setCell(1, 1, 'x');
+					}
 				}
 			}
 		});
@@ -176,6 +307,27 @@ public class Controller {
 					ready_o.setEnabled(false);
 					selectPlayerXBtn.setEnabled(false);
 					selectPlayerOBtn.setEnabled(false);
+				}
+				
+				if (logic.isDone()){
+					logic.resetTable();
+					board.setFilledPos(0);
+					board.setState('T');
+					logic.setDone();
+					if (board.getCurrentPlayer() == 'o') {
+						board.setCurrentPlayer();
+					}
+				}
+				
+				if (logic.isStarting()) {
+					if (roster.getSelectedPlayerX().getMode() != null && board.getFilledPos()==0){
+						logic.move(1, 1, board);
+						// Increase filled positions
+						board.setFilledPos(board.getFilledPos() + 1);
+						board.setCurrentPlayer();
+						// Fill gui table
+						view.getBoardPanel().setCell(1, 1, 'x');
+					}
 				}
 			}
 		});
