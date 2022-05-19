@@ -227,7 +227,6 @@ public class AI extends Player{
 					}
 				}
 			} while(!logic.isEmpty(x, y));
-			System.out.println(x + ":"+ y);
 			int[] arr2 = {x,y};
 			return arr2;
 		}

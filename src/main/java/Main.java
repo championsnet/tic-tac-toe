@@ -18,7 +18,7 @@ public class Main {
 		Board board = new Board(0,'T','x');
 		// Initialize Controller object
 		Controller c = new Controller(roster, logic, view, board);
-		c.runPlayerVsPlayer(c.getTable(), board, logic, view, c.getReadyX(), 
+		c.run(c.getTable(), board, logic, view, c.getReadyX(), 
 							c.getReadyO(), c.getDoneBtn(), c.getQuit());
 	}
 

@@ -69,7 +69,7 @@ public class Controller {
 		return this.quit;
 	}
 
-	public void runPlayerVsPlayer(JTable table, Board board, GameLogic logic, MainWindow view, JButton ready_x, JButton ready_o, JButton doneBtn, JButton quit) {
+	public void run(JTable table, Board board, GameLogic logic, MainWindow view, JButton ready_x, JButton ready_o, JButton doneBtn, JButton quit) {
 		ArrayList<Board> boards = new ArrayList<Board>();
 		boards.add(board);
 		
