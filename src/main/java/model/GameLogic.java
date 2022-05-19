@@ -2,7 +2,7 @@ package main.java.model;
 
 public class GameLogic {
 	
-	private char[][] table = new char[3][3];
+	private char[][] table;
 	private boolean startx = false;
 	private boolean starto = false;
 	private boolean done = false;
@@ -52,9 +52,9 @@ public class GameLogic {
 			this.table[x][y] = 'o';
 			System.out.println("O on " + x + ":" + y);
 		}
-	};
-	
-	
+	}
+
+
 	public boolean isDone() {
 		return this.done;
 	}

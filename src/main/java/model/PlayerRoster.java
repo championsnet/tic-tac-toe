@@ -30,7 +30,7 @@ public class PlayerRoster implements PlayerRosterDao{
 	Player selectedPlayerO;
 
 	public PlayerRoster(){
-		players = new ArrayList<Player>();
+		players = new ArrayList<>();
 		
 		// Load Player Roster from XML file
 		try {  
@@ -53,7 +53,7 @@ public class PlayerRoster implements PlayerRosterDao{
 					int games = Integer.parseInt(e.getElementsByTagName("games").item(0).getTextContent());
 					int wins = Integer.parseInt(e.getElementsByTagName("wins").item(0).getTextContent());
 					int loses = Integer.parseInt(e.getElementsByTagName("loses").item(0).getTextContent());
-					ArrayList<GameRecord> records = new ArrayList<GameRecord>();
+					ArrayList<GameRecord> records = new ArrayList<>();
 					
 					NodeList nodeListRecs = e.getElementsByTagName("record");
 					for (int jtr = 0; jtr < nodeListRecs.getLength(); jtr++) {
@@ -89,7 +89,7 @@ public class PlayerRoster implements PlayerRosterDao{
 					int games = Integer.parseInt(e.getElementsByTagName("games").item(0).getTextContent());
 					int wins = Integer.parseInt(e.getElementsByTagName("wins").item(0).getTextContent());
 					int loses = Integer.parseInt(e.getElementsByTagName("loses").item(0).getTextContent());
-					ArrayList<GameRecord> records = new ArrayList<GameRecord>();
+					ArrayList<GameRecord> records = new ArrayList<>();
 					
 					NodeList nodeListRecs = e.getElementsByTagName("record");
 					for (int jtr = 0; jtr < nodeListRecs.getLength(); jtr++) {

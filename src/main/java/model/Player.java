@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class Player {
 
-	private String name;
+	private final String name;
 	
 	// AI mplimpikia
 	private String mode;
@@ -23,7 +23,7 @@ public class Player {
 		this.games = 0;
 		this.wins = 0;
 		this.loses = 0;
-		this.gameRecords = new ArrayList<GameRecord>();
+		this.gameRecords = new ArrayList<>();
 		this.score = 0;
 	}
 	
@@ -99,7 +99,7 @@ public class Player {
 	// Return last i records from newest to oldest.
 	// The way records are saved the oldest ones are first
 	public ArrayList<GameRecord> getRecentGames(int number) {
-		ArrayList<GameRecord> recentGames = new ArrayList<GameRecord>();
+		ArrayList<GameRecord> recentGames = new ArrayList<>();
 		for (int i=0; i<Integer.min(number, getGameRecords().size()); i++) {
 			recentGames.add(getGameRecords().get(getGameRecords().size() - i - 1));
 		}
@@ -110,7 +110,7 @@ public class Player {
 	// and sorting and then returning according to the sorted indices
 	// Complexity is still nlogn but uses more memory alla siga
 	public ArrayList<GameRecord> getBestGames(int games) {
-		ArrayList<GameRecord> bestGames = new ArrayList<GameRecord>();
+		ArrayList<GameRecord> bestGames = new ArrayList<>();
 		
 		// All relative scores and their respective indices
 		int[][] relativeScores = new int[gameRecords.size()][2];

@@ -4,12 +4,12 @@ package main.java.model;
 public class GameRecord {
 
 	// Mporei na allaksei se object references pio meta
-	private String playerX;
-	private String playerO;
-	private char result;
-	private float scoreX;
-	private float scoreO;
-	private String timestamp;
+	private final String playerX;
+	private final String playerO;
+	private final char result;
+	private final float scoreX;
+	private final float scoreO;
+	private final String timestamp;
 	
 	// Gia na krinoume to poso kalo einai to paixnidi
 	private int relativeScoreX;
@@ -78,14 +78,6 @@ public class GameRecord {
 
 	public String getTimestamp() {
 		return timestamp;
-	}
-	
-	public int getRelativeScoreX() {
-		return relativeScoreX;
-	}
-	
-	public int getRelativeScoreO() {
-		return relativeScoreO;
 	}
 
 	public int getRelativeScore(String name) {
