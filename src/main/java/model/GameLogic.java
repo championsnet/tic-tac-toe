@@ -2,7 +2,7 @@ package main.java.model;
 
 public class GameLogic {
 	
-	private char[][] table;
+	private final char[][] table;
 	private boolean startx = false;
 	private boolean starto = false;
 	private boolean done = false;
