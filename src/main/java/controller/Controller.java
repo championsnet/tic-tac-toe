@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 import javax.swing.JButton;
 import javax.swing.JTable;
@@ -276,12 +275,12 @@ public class Controller {
 		
 		int[] arr = new int[2];
 		if (board.getCurrentPlayer() == 'o') {
-			arr = ((AI)roster.getSelectedPlayerO()).move(board, logic, view);
+			arr = ((AI)roster.getSelectedPlayerO()).move(board, logic);
 			// Check if cell is empty when you press
 			move(arr[0], arr[1]);
 		}
 		else if (board.getCurrentPlayer() == 'x') {
-			arr = ((AI)roster.getSelectedPlayerX()).move(board, logic, view);
+			arr = ((AI)roster.getSelectedPlayerX()).move(board, logic);
 			move(arr[0], arr[1]);
 		}
 		

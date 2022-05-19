@@ -3,11 +3,9 @@ package main.java.model;
 import java.util.ArrayList;
 import java.util.Random;
 
-import main.java.view.MainWindow;
-
 public class AI extends Player{
 	
-	private String mode;
+	private final String mode;
 	
 	public AI(String name, String mode) {
 		super(name);
@@ -23,7 +21,7 @@ public class AI extends Player{
 		return this.mode;
 	}
 	
-	public int[] move(Board board, GameLogic logic, MainWindow view) {
+	public int[] move(Board board, GameLogic logic) {
 		int x = -1;
 		int y = -1;
 		int bestScore = -100;
@@ -36,8 +34,6 @@ public class AI extends Player{
 					break;
 				}
 			} while(!logic.isEmpty(x, y));
-			int[] arr = {x,y};
-			return arr;
 		}
 		else {
 			int [] perfect = perfectMove(board, logic);
@@ -230,67 +226,62 @@ public class AI extends Player{
 					}
 				}
 			} while(!logic.isEmpty(x, y));
-			int[] arr2 = {x,y};
-			return arr2;
 		}
-		
+		return new int[]{x,y};
+
 	}
-	
-//	ArrayList<int[]> getForks(char[][] state, char player) {
-//		
-//	}
-	
+
 	ArrayList<int[]> getThirdsInRow(char[][] state, char player) {
-		ArrayList<int[]> thirds = new ArrayList<int[]>();
+		ArrayList<int[]> thirds = new ArrayList<>();
 		for (int k=0 ; k<3; k++) {
 			
 			if (state[k][0] == state[k][1] && state[k][0] == player && state[k][2] == ' ') {
-				int move[] = {k,2};
+				int[] move = {k,2};
 				thirds.add(move);
 			}
 			if (state[k][0] == state[k][2] && state[k][0] == player && state[k][1] == ' ') {
-				int move[] = {k,1};
+				int[] move = {k,1};
 				thirds.add(move);
 			}
 			if (state[k][1] == state[k][2] && state[k][1] == player && state[k][0] == ' '){
-				int move[] = {k,0};
+				int[] move = {k,0};
 				thirds.add(move);
 			}
 			if (state[0][k] == state[1][k] && state[0][k] == player && state[2][k] == ' ') {
-				int move[] = {2,k};
+				int[] move = {2,k};
 				thirds.add(move);
 			}
 			if (state[0][k] == state[2][k] && state[0][k] == player && state[1][k] == ' ') {
-				int move[] = {1,k};
+				int[] move = {1,k};
 				thirds.add(move);
 			}
 			if (state[1][k] == state[2][k] && state[1][k] == player && state[0][k] == ' '){
-				int move[] = {0,k};
+				int[] move = {0,k};
 				thirds.add(move);
 			}
 		}
 		if (state[0][0] == state[1][1] && state[0][0] == player && state[2][2] == ' ') {
-			int move[] = {2,2};
+			int[] move = {2,2};
 			thirds.add(move);
 		}
 		if (state[0][0] == state[2][2] && state[0][0] == player && state[1][1] == ' ') {
-			int move[] = {1,1};
+			int[] move = {1,1};
 			thirds.add(move);
 		}
 		if (state[1][1] == state[2][2] && state[1][1] == player && state[0][0] == ' ') {
-			int move[] = {0,0};
+			int[] move = {0,0};
 			thirds.add(move);
 		}
 		if (state[2][0] == state[1][1] && state[2][0] == player && state[0][2] == ' ') {
-			int move[] = {0,2};
+			int[] move = {0,2};
 			thirds.add(move);
 		}
 		if (state[2][0] == state[0][2] && state[2][0] == player && state[1][1] == ' ') {
-			int move[] = {1,1};
-			thirds.add(move);;
+			int[] move = {1,1};
+			thirds.add(move);
 		}
 		if (state[1][1] == state[0][2] && state[1][1] == player && state[2][0] == ' ') {
-			int move[] = {2,0};
+			int[] move = {2,0};
 			thirds.add(move);
 		}
 		return thirds;
@@ -301,8 +292,8 @@ public class AI extends Player{
 		char player = board.getCurrentPlayer();
 		char opponent = 'x';
 		if (player == 'x') opponent = 'o';
-		char state[][] = logic.getTable();
-		int sample[] = {-1, -1};
+		char[][] state = logic.getTable();
+		int[] sample = {-1, -1};
 		// Check if we have 2 in a row and return if so
 		ArrayList<int[]> perfectMoves = getThirdsInRow(state, player);
 		if (perfectMoves.size() != 0) {
@@ -323,11 +314,11 @@ public class AI extends Player{
 		for (int i=0; i<3; i++) {
 			for (int j=0; j<3; j++) {
 				if (state[i][j] == ' ') {
-					char interstate[][] = new char[3][3];
+					char[][] interstate = new char[3][3];
 					for(int k = 0; k < 3; k++) interstate[k] = state[k].clone();
 					interstate[i][j] = player;
 					if (getThirdsInRow(interstate, player).size() >= 2) {
-						int move[] = {i,j};
+						int[] move = {i,j};
 						perfectMoves.add(move);
 					}	
 				}
@@ -344,7 +335,7 @@ public class AI extends Player{
 		for (int i=0; i<3; i++) {
 			for (int j=0; j<3; j++) {
 				if (state[i][j] == ' ') {
-					char interstate[][] = new char[3][3];
+					char[][] interstate = new char[3][3];
 					for(int k = 0; k < 3; k++) interstate[k] = state[k].clone();
 					interstate[i][j] = player;
 					if (getThirdsInRow(interstate, player).size() >= 1) {
@@ -353,7 +344,7 @@ public class AI extends Player{
 						for (int m=0; m<3; m++) {
 							for (int n=0; n<3; n++) {
 								if (interstate[m][n] == ' ') {
-									char interinterstate[][] = new char[3][3];
+									char[][] interinterstate = new char[3][3];
 									for(int k = 0; k < 3; k++) interinterstate[k] = interstate[k].clone();
 									interinterstate[m][n] = opponent;
 									
@@ -365,7 +356,7 @@ public class AI extends Player{
 							}
 						}
 						if (okMove) {
-							int move[] = {i,j};
+							int[] move = {i,j};
 							perfectMoves.add(move);
 						}
 					}	
@@ -388,19 +379,19 @@ public class AI extends Player{
 		
 		// If all previous is not covered and opponent has covered a corner, play on the opposite
 		if (state[0][0] == opponent && state[2][2] == ' ') {
-			int move[] = {2,2};
+			int[] move = {2,2};
 			perfectMoves.add(move);
 		}
 		if (state[0][2] == opponent && state[2][0] == ' ') {
-			int move[] = {2,0};
+			int[] move = {2,0};
 			perfectMoves.add(move);
 		}
 		if (state[2][0] == opponent && state[0][2] == ' ') {
-			int move[] = {0,2};
+			int[] move = {0,2};
 			perfectMoves.add(move);
 		}
 		if (state[2][2] == opponent && state[0][0] == ' ') {
-			int move[] = {0,0};
+			int[] move = {0,0};
 			perfectMoves.add(move);
 		}
 		if (perfectMoves.size() != 0) {
@@ -412,19 +403,19 @@ public class AI extends Player{
 		// Then just play in an empty corner
 		// If all previous is not covered and opponent has covered a corner, play on the opposite
 		if (state[2][2] == ' ') {
-			int move[] = {2,2};
+			int[] move = {2,2};
 			perfectMoves.add(move);
 		}
 		if (state[2][0] == ' ') {
-			int move[] = {2,0};
+			int[] move = {2,0};
 			perfectMoves.add(move);
 		}
 		if (state[0][2] == ' ') {
-			int move[] = {0,2};
+			int[] move = {0,2};
 			perfectMoves.add(move);
 		}
 		if (state[0][0] == ' ') {
-			int move[] = {0,0};
+			int[] move = {0,0};
 			perfectMoves.add(move);
 		}
 		if (perfectMoves.size() != 0) {
@@ -435,19 +426,19 @@ public class AI extends Player{
 		
 		// If everything fails just play whatever (side)
 		if (state[0][1] == ' ') {
-			int move[] = {0,1};
+			int[] move = {0,1};
 			perfectMoves.add(move);
 		}
 		if (state[1][0] == ' ') {
-			int move[] = {1,0};
+			int[] move = {1,0};
 			perfectMoves.add(move);
 		}
 		if (state[1][2] == ' ') {
-			int move[] = {1,2};
+			int[] move = {1,2};
 			perfectMoves.add(move);
 		}
 		if (state[2][1] == ' ') {
-			int move[] = {2,1};
+			int[] move = {2,1};
 			perfectMoves.add(move);
 		}
 		if (perfectMoves.size() != 0) {
